@@ -1,6 +1,6 @@
 package com.example.stadtapp;
 
-import com.example.stadtrundgang.R;
+import com.example.stadtapp.R;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
