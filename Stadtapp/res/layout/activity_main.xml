@@ -6,11 +6,31 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.stadtapp.MainActivity" >
+    tools:context="com.example.stadtrundgang.MainActivity" >
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="Stadtrundgang" />
+
+    <Button
+        android:id="@+id/btn_gmap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="117dp"
+        android:text="GoogleMaps" />
+
+    <Button
+        android:id="@+id/btn_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_gmap"
+        android:layout_alignLeft="@+id/btn_gmap"
+        android:layout_alignRight="@+id/btn_gmap"
+        android:layout_marginBottom="46dp"
+        android:text="Photo" />
 
 </RelativeLayout>
