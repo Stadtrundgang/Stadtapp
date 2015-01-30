@@ -1,0 +1,1204 @@
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta name="robots" content="index,follow" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="0.11.1 (2b48ae40ea1b)" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<link rel="icon" href="/source/default/img/icon.png" type="image/png" />
+<link rel="stylesheet" type="text/css" media="all"
+    title="Default" href="/source/default/style.css" />
+<link rel="alternate stylesheet" type="text/css" media="all"
+    title="Paper White" href="/source/default/print.css" />
+<link rel="stylesheet" type="text/css" href="/source/default/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="/source/default/jquery.tooltip.css" />
+
+<link rel="search" href="/source/opensearch"
+    type="application/opensearchdescription+xml"
+    title="OpenGrok Search for current project(s)" />
+<script type="text/javascript" src="/source/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="/source/jquery.tooltip-1.3.pack.js"></script>
+
+<script type="text/javascript" src="/source/utils.js"></script>
+<title>Cross Reference: /android/4.4/prebuilts/tools/common/http-client/commons-codec-1.4.jar</title>
+</head>
+<body>
+<script type="text/javascript">/* <![CDATA[ */
+    document.hash = 'null';document.rev = '';document.link = '/source/xref/android/4.4/prebuilts/tools/common/http-client/commons-codec-1.4.jar';document.annotate = false;
+    document.domReady.push(function() {domReadyMast();});
+    document.pageReady.push(function() { pageReadyMast();});
+/* ]]> */</script>
+<div id="page">
+    <div id="whole_header">
+        <form action="/source/search">
+<div id="header">
+<a href="/source/" class="cslogo">
+    <span style="color: #5a2c00; letter-spacing: -2px;">{</span><span 
+        style="color: #0f3368; vertical-align: middle;">Code</span>
+    <span style="color: #222222; vertical-align: middle;">Search</span>
+</a>
+<span id="partner">
+    <a href="http://www.metager.de"><span id="partner_metager"></span></a>
+</span>
+
+
+
+    <div id="pagetitle"><span id="filename"
+                    >Cross Reference: commons-codec-1.4.jar</span></div>
+</div>
+<div id="Masthead">
+    <tt><a href="/source/xref/">xref</a>: /<a href="/source/xref/android/">android</a>/<a href="/source/xref/android/4.4/">4.4</a>/<a href="/source/xref/android/4.4/prebuilts/">prebuilts</a>/<a href="/source/xref/android/4.4/prebuilts/tools/">tools</a>/<a href="/source/xref/android/4.4/prebuilts/tools/common/">common</a>/<a href="/source/xref/android/4.4/prebuilts/tools/common/http-client/">http-client</a>/<a href="/source/xref/android/4.4/prebuilts/tools/common/http-client/commons-codec-1.4.jar">commons-codec-1.4.jar</a></tt>
+</div>
+<div id="bar">
+    <ul>
+        <li><a href="/source/"><span id="home"></span>Home</a></li><li><a href="/source/history/android/4.4/prebuilts/tools/common/http-client/commons-codec-1.4.jar"><span id="history"></span>History</a></li><li><a href="#" onclick="javascript:get_annotations(); return false;"
+            ><span class="annotate"></span>Annotate</a></li><li><a href="#" onclick="javascript:lntoggle();return false;"
+            title="Show or hide line numbers (might be slower if file has more than 10 000 lines)."><span id="line"></span>Line#</a></li><li><a
+            href="#" onclick="javascript:lsttoggle();return false;"
+            title="Show or hide symbol list."><span id="defbox"></span>Navigate</a></li><li><a href="/source/raw/android/4.4/prebuilts/tools/common/http-client/commons-codec-1.4.jar"><span id="download"></span>Download</a></li><li><input type="text" id="search" name="q" class="q" />
+            <input type="submit" value="Search" class="submit" /></li><li><input type="checkbox" name="path" value="/android/4.4/prebuilts/tools/common/http-client/" /> only in <b>commons-codec-1.4.jar</b></li>
+        
+    </ul>
+    <input type="hidden" name="project" value="android" />
+</div>
+        </form>
+    </div>
+<div id="content">
+<script type="text/javascript">/* <![CDATA[ */
+document.pageReady.push(function() { pageReadyList();});
+/* ]]> */</script>
+
+<div id="src">
+    <pre><br/><b>META-INF/</b><br/><b>META-INF/MANIFEST.MF</b><br/><b>org/</b><br/><b>org/apache/</b><br/><b>org/apache/commons/</b><br/><b>org/apache/commons/codec/</b><br/><b>org/apache/commons/codec/binary/</b><br/><b>org/apache/commons/codec/digest/</b><br/><b>org/apache/commons/codec/language/</b><br/><b>org/apache/commons/codec/net/</b><br/><b>META-INF/LICENSE.txt</b><br/><b>META-INF/NOTICE.txt</b><br/><b>org/apache/commons/codec/binary/Base64.class</b><pre><a href="/source/s?path=Base64.java">Base64.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.binary">org.apache.commons.codec.binary</a>
+public <a class="d" name="org.apache.commons.codec.binary.Base64" href="/source/s?defs=org.apache.commons.codec.binary.Base64">org.apache.commons.codec.binary.Base64</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.BinaryEncoder">org.apache.commons.codec.BinaryEncoder</a> <a href="/source/s?defs=org.apache.commons.codec.BinaryDecoder">org.apache.commons.codec.BinaryDecoder</a>  {
+	private static final int <a class="d" name="DEFAULT_BUFFER_RESIZE_FACTOR" href="/source/s?defs=DEFAULT_BUFFER_RESIZE_FACTOR">DEFAULT_BUFFER_RESIZE_FACTOR</a>
+	private static final int <a class="d" name="DEFAULT_BUFFER_SIZE" href="/source/s?defs=DEFAULT_BUFFER_SIZE">DEFAULT_BUFFER_SIZE</a>
+	static final int <a class="d" name="CHUNK_SIZE" href="/source/s?defs=CHUNK_SIZE">CHUNK_SIZE</a>
+	static final byte[] <a class="d" name="CHUNK_SEPARATOR" href="/source/s?defs=CHUNK_SEPARATOR">CHUNK_SEPARATOR</a>
+	private static final byte[] <a class="d" name="STANDARD_ENCODE_TABLE" href="/source/s?defs=STANDARD_ENCODE_TABLE">STANDARD_ENCODE_TABLE</a>
+	private static final byte[] <a class="d" name="URL_SAFE_ENCODE_TABLE" href="/source/s?defs=URL_SAFE_ENCODE_TABLE">URL_SAFE_ENCODE_TABLE</a>
+	private static final byte <a class="d" name="PAD" href="/source/s?defs=PAD">PAD</a>
+	private static final byte[] <a class="d" name="DECODE_TABLE" href="/source/s?defs=DECODE_TABLE">DECODE_TABLE</a>
+	private static final int <a class="d" name="MASK_6BITS" href="/source/s?defs=MASK_6BITS">MASK_6BITS</a>
+	private static final int <a class="d" name="MASK_8BITS" href="/source/s?defs=MASK_8BITS">MASK_8BITS</a>
+	private final byte[] <a class="d" name="encodeTable" href="/source/s?defs=encodeTable">encodeTable</a>
+	private final int <a class="d" name="lineLength" href="/source/s?defs=lineLength">lineLength</a>
+	private final byte[] <a class="d" name="lineSeparator" href="/source/s?defs=lineSeparator">lineSeparator</a>
+	private final int <a class="d" name="decodeSize" href="/source/s?defs=decodeSize">decodeSize</a>
+	private final int <a class="d" name="encodeSize" href="/source/s?defs=encodeSize">encodeSize</a>
+	private byte[] <a class="d" name="buffer" href="/source/s?defs=buffer">buffer</a>
+	private int <a class="d" name="pos" href="/source/s?defs=pos">pos</a>
+	private int <a class="d" name="readPos" href="/source/s?defs=readPos">readPos</a>
+	private int <a class="d" name="currentLinePos" href="/source/s?defs=currentLinePos">currentLinePos</a>
+	private int <a class="d" name="modulus" href="/source/s?defs=modulus">modulus</a>
+	private boolean <a class="d" name="eof" href="/source/s?defs=eof">eof</a>
+	private int <a class="d" name="x" href="/source/s?defs=x">x</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (boolean) 
+		boolean urlSafe
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (int) 
+		int lineLength
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (int, byte[]) 
+		int lineLength
+		byte[] lineSeparator
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (int, byte[], boolean) 
+		String sep
+		int lineLength
+		byte[] lineSeparator
+		boolean urlSafe
+	public boolean <a class="d" name="isUrlSafe" href="/source/s?defs=isUrlSafe">isUrlSafe</a> () 
+	boolean <a class="d" name="hasData" href="/source/s?defs=hasData">hasData</a> () 
+	int <a class="d" name="avail" href="/source/s?defs=avail">avail</a> () 
+	private void <a class="d" name="resizeBuffer" href="/source/s?defs=resizeBuffer">resizeBuffer</a> () 
+		byte[] b
+	int <a class="d" name="readResults" href="/source/s?defs=readResults">readResults</a> (byte[], int, int) 
+		int len
+		byte[] b
+		int bPos
+		int bAvail
+	void <a class="d" name="setInitialBuffer" href="/source/s?defs=setInitialBuffer">setInitialBuffer</a> (byte[], int, int) 
+		byte[] out
+		int outPos
+		int outAvail
+	void <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (byte[], int, int) 
+		int b
+		int i
+		byte[] in
+		int inPos
+		int inAvail
+	void <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (byte[], int, int) 
+		int result
+		byte b
+		int i
+		byte[] in
+		int inPos
+		int inAvail
+	public static boolean <a class="d" name="isBase64" href="/source/s?defs=isBase64">isBase64</a> (byte) 
+		byte octet
+	public static boolean <a class="d" name="isArrayByteBase64" href="/source/s?defs=isArrayByteBase64">isArrayByteBase64</a> (byte[]) 
+		int i
+		byte[] arrayOctet
+	private static boolean <a class="d" name="containsBase64Byte" href="/source/s?defs=containsBase64Byte">containsBase64Byte</a> (byte[]) 
+		int i
+		byte[] arrayOctet
+	public static byte[] <a class="d" name="encodeBase64" href="/source/s?defs=encodeBase64">encodeBase64</a> (byte[]) 
+		byte[] binaryData
+	public static java.lang.String <a class="d" name="encodeBase64String" href="/source/s?defs=encodeBase64String">encodeBase64String</a> (byte[]) 
+		byte[] binaryData
+	public static byte[] <a class="d" name="encodeBase64URLSafe" href="/source/s?defs=encodeBase64URLSafe">encodeBase64URLSafe</a> (byte[]) 
+		byte[] binaryData
+	public static java.lang.String <a class="d" name="encodeBase64URLSafeString" href="/source/s?defs=encodeBase64URLSafeString">encodeBase64URLSafeString</a> (byte[]) 
+		byte[] binaryData
+	public static byte[] <a class="d" name="encodeBase64Chunked" href="/source/s?defs=encodeBase64Chunked">encodeBase64Chunked</a> (byte[]) 
+		byte[] binaryData
+	public java.lang.Object <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		Object pObject
+	public byte[] <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.String) 
+		String pArray
+	public byte[] <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (byte[]) 
+		byte[] pArray
+		long len
+		byte[] buf
+		byte[] result
+	public static byte[] <a class="d" name="encodeBase64" href="/source/s?defs=encodeBase64">encodeBase64</a> (byte[], boolean) 
+		byte[] binaryData
+		boolean isChunked
+	public static byte[] <a class="d" name="encodeBase64" href="/source/s?defs=encodeBase64">encodeBase64</a> (byte[], boolean, boolean) 
+		byte[] binaryData
+		boolean isChunked
+		boolean urlSafe
+	public static byte[] <a class="d" name="encodeBase64" href="/source/s?defs=encodeBase64">encodeBase64</a> (byte[], boolean, boolean, int) 
+		byte[] binaryData
+		boolean isChunked
+		boolean urlSafe
+		int maxResultSize
+		long len
+		org.apache.commons.codec.binary.Base64 b64
+	public static byte[] <a class="d" name="decodeBase64" href="/source/s?defs=decodeBase64">decodeBase64</a> (java.lang.String) 
+		String base64String
+	public static byte[] <a class="d" name="decodeBase64" href="/source/s?defs=decodeBase64">decodeBase64</a> (byte[]) 
+		byte[] base64Data
+	static byte[] <a class="d" name="discardWhitespace" href="/source/s?defs=discardWhitespace">discardWhitespace</a> (byte[]) 
+		int i
+		byte[] data
+		byte[] groomedData
+		int bytesCopied
+		byte[] packedData
+	private static boolean <a class="d" name="isWhiteSpace" href="/source/s?defs=isWhiteSpace">isWhiteSpace</a> (byte) 
+		byte byteToCheck
+	public java.lang.Object <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		Object pObject
+	public java.lang.String <a class="d" name="encodeToString" href="/source/s?defs=encodeToString">encodeToString</a> (byte[]) 
+		byte[] pArray
+	public byte[] <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (byte[]) 
+		byte[] smallerBuf
+		byte[] pArray
+		long len
+		byte[] buf
+	private static long <a class="d" name="getEncodeLength" href="/source/s?defs=getEncodeLength">getEncodeLength</a> (byte[], int, byte[]) 
+		boolean lenChunksPerfectly
+		byte[] pArray
+		int chunkSize
+		byte[] chunkSeparator
+		long len
+		long mod
+	public static java.math.BigInteger <a class="d" name="decodeInteger" href="/source/s?defs=decodeInteger">decodeInteger</a> (byte[]) 
+		byte[] pArray
+	public static byte[] <a class="d" name="encodeInteger" href="/source/s?defs=encodeInteger">encodeInteger</a> (java.math.BigInteger) 
+		java.math.BigInteger bigInt
+	static byte[] <a class="d" name="toIntegerBytes" href="/source/s?defs=toIntegerBytes">toIntegerBytes</a> (java.math.BigInteger) 
+		java.math.BigInteger bigInt
+		int bitlen
+		byte[] bigBytes
+		int startSrc
+		int len
+		int startDst
+		byte[] resizedBytes
+	private void <a class="d" name="reset" href="/source/s?defs=reset">reset</a> () 
+	static void <a class="d" name="<clinit>" href="/source/s?defs=<clinit>"><clinit></a> () 
+}
+</pre><br/><b>org/apache/commons/codec/binary/Base64InputStream.class</b><pre><a href="/source/s?path=Base64InputStream.java">Base64InputStream.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.binary">org.apache.commons.codec.binary</a>
+public <a class="d" name="org.apache.commons.codec.binary.Base64InputStream" href="/source/s?defs=org.apache.commons.codec.binary.Base64InputStream">org.apache.commons.codec.binary.Base64InputStream</a> extends <a href="/source/s?defs=java.io.FilterInputStream">java.io.FilterInputStream</a> {
+	private final boolean <a class="d" name="doEncode" href="/source/s?defs=doEncode">doEncode</a>
+	private final org.apache.commons.codec.binary.Base64 <a class="d" name="base64" href="/source/s?defs=base64">base64</a>
+	private final byte[] <a class="d" name="singleByte" href="/source/s?defs=singleByte">singleByte</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.io.InputStream) 
+		java.io.InputStream in
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.io.InputStream, boolean) 
+		java.io.InputStream in
+		boolean doEncode
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.io.InputStream, boolean, int, byte[]) 
+		java.io.InputStream in
+		boolean doEncode
+		int lineLength
+		byte[] lineSeparator
+	public int <a class="d" name="read" href="/source/s?defs=read">read</a> ()  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		int r
+	public int <a class="d" name="read" href="/source/s?defs=read">read</a> (byte[], int, int)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		byte[] buf
+		int c
+		byte[] b
+		int offset
+		int len
+	public boolean <a class="d" name="markSupported" href="/source/s?defs=markSupported">markSupported</a> () 
+}
+</pre><br/><b>org/apache/commons/codec/binary/Base64OutputStream.class</b><pre><a href="/source/s?path=Base64OutputStream.java">Base64OutputStream.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.binary">org.apache.commons.codec.binary</a>
+public <a class="d" name="org.apache.commons.codec.binary.Base64OutputStream" href="/source/s?defs=org.apache.commons.codec.binary.Base64OutputStream">org.apache.commons.codec.binary.Base64OutputStream</a> extends <a href="/source/s?defs=java.io.FilterOutputStream">java.io.FilterOutputStream</a> {
+	private final boolean <a class="d" name="doEncode" href="/source/s?defs=doEncode">doEncode</a>
+	private final org.apache.commons.codec.binary.Base64 <a class="d" name="base64" href="/source/s?defs=base64">base64</a>
+	private final byte[] <a class="d" name="singleByte" href="/source/s?defs=singleByte">singleByte</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.io.OutputStream) 
+		java.io.OutputStream out
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.io.OutputStream, boolean) 
+		java.io.OutputStream out
+		boolean doEncode
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.io.OutputStream, boolean, int, byte[]) 
+		java.io.OutputStream out
+		boolean doEncode
+		int lineLength
+		byte[] lineSeparator
+	public void <a class="d" name="write" href="/source/s?defs=write">write</a> (int)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		int i
+	public void <a class="d" name="write" href="/source/s?defs=write">write</a> (byte[], int, int)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		byte[] b
+		int offset
+		int len
+	private void <a class="d" name="flush" href="/source/s?defs=flush">flush</a> (boolean)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		byte[] buf
+		int c
+		boolean propogate
+		int avail
+	public void <a class="d" name="flush" href="/source/s?defs=flush">flush</a> ()  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+	public void <a class="d" name="close" href="/source/s?defs=close">close</a> ()  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+}
+</pre><br/><b>org/apache/commons/codec/binary/BinaryCodec.class</b><pre><a href="/source/s?path=BinaryCodec.java">BinaryCodec.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.binary">org.apache.commons.codec.binary</a>
+public <a class="d" name="org.apache.commons.codec.binary.BinaryCodec" href="/source/s?defs=org.apache.commons.codec.binary.BinaryCodec">org.apache.commons.codec.binary.BinaryCodec</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.BinaryDecoder">org.apache.commons.codec.BinaryDecoder</a> <a href="/source/s?defs=org.apache.commons.codec.BinaryEncoder">org.apache.commons.codec.BinaryEncoder</a>  {
+	private static final char[] <a class="d" name="EMPTY_CHAR_ARRAY" href="/source/s?defs=EMPTY_CHAR_ARRAY">EMPTY_CHAR_ARRAY</a>
+	private static final byte[] <a class="d" name="EMPTY_BYTE_ARRAY" href="/source/s?defs=EMPTY_BYTE_ARRAY">EMPTY_BYTE_ARRAY</a>
+	private static final int <a class="d" name="BIT_0" href="/source/s?defs=BIT_0">BIT_0</a>
+	private static final int <a class="d" name="BIT_1" href="/source/s?defs=BIT_1">BIT_1</a>
+	private static final int <a class="d" name="BIT_2" href="/source/s?defs=BIT_2">BIT_2</a>
+	private static final int <a class="d" name="BIT_3" href="/source/s?defs=BIT_3">BIT_3</a>
+	private static final int <a class="d" name="BIT_4" href="/source/s?defs=BIT_4">BIT_4</a>
+	private static final int <a class="d" name="BIT_5" href="/source/s?defs=BIT_5">BIT_5</a>
+	private static final int <a class="d" name="BIT_6" href="/source/s?defs=BIT_6">BIT_6</a>
+	private static final int <a class="d" name="BIT_7" href="/source/s?defs=BIT_7">BIT_7</a>
+	private static final int[] <a class="d" name="BITS" href="/source/s?defs=BITS">BITS</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public byte[] <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (byte[]) 
+		byte[] raw
+	public java.lang.Object <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		Object raw
+	public java.lang.Object <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		Object ascii
+	public byte[] <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (byte[]) 
+		byte[] ascii
+	public byte[] <a class="d" name="toByteArray" href="/source/s?defs=toByteArray">toByteArray</a> (java.lang.String) 
+		String ascii
+	public static byte[] <a class="d" name="fromAscii" href="/source/s?defs=fromAscii">fromAscii</a> (char[]) 
+		int bits
+		int ii
+		int jj
+		char[] ascii
+		byte[] l_raw
+	public static byte[] <a class="d" name="fromAscii" href="/source/s?defs=fromAscii">fromAscii</a> (byte[]) 
+		int bits
+		int ii
+		int jj
+		byte[] ascii
+		byte[] l_raw
+	private static boolean <a class="d" name="isEmpty" href="/source/s?defs=isEmpty">isEmpty</a> (byte[]) 
+		byte[] array
+	public static byte[] <a class="d" name="toAsciiBytes" href="/source/s?defs=toAsciiBytes">toAsciiBytes</a> (byte[]) 
+		int bits
+		int ii
+		int jj
+		byte[] raw
+		byte[] l_ascii
+	public static char[] <a class="d" name="toAsciiChars" href="/source/s?defs=toAsciiChars">toAsciiChars</a> (byte[]) 
+		int bits
+		int ii
+		int jj
+		byte[] raw
+		char[] l_ascii
+	public static java.lang.String <a class="d" name="toAsciiString" href="/source/s?defs=toAsciiString">toAsciiString</a> (byte[]) 
+		byte[] raw
+	static void <a class="d" name="<clinit>" href="/source/s?defs=<clinit>"><clinit></a> () 
+}
+</pre><br/><b>org/apache/commons/codec/binary/Hex.class</b><pre><a href="/source/s?path=Hex.java">Hex.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.binary">org.apache.commons.codec.binary</a>
+public <a class="d" name="org.apache.commons.codec.binary.Hex" href="/source/s?defs=org.apache.commons.codec.binary.Hex">org.apache.commons.codec.binary.Hex</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.BinaryEncoder">org.apache.commons.codec.BinaryEncoder</a> <a href="/source/s?defs=org.apache.commons.codec.BinaryDecoder">org.apache.commons.codec.BinaryDecoder</a>  {
+	public static final String <a class="d" name="DEFAULT_CHARSET_NAME" href="/source/s?defs=DEFAULT_CHARSET_NAME">DEFAULT_CHARSET_NAME</a>
+	private static final char[] <a class="d" name="DIGITS_LOWER" href="/source/s?defs=DIGITS_LOWER">DIGITS_LOWER</a>
+	private static final char[] <a class="d" name="DIGITS_UPPER" href="/source/s?defs=DIGITS_UPPER">DIGITS_UPPER</a>
+	private final String <a class="d" name="charsetName" href="/source/s?defs=charsetName">charsetName</a>
+	public static byte[] <a class="d" name="decodeHex" href="/source/s?defs=decodeHex">decodeHex</a> (char[])  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		int f
+		int i
+		int j
+		char[] data
+		int len
+		byte[] out
+	public static char[] <a class="d" name="encodeHex" href="/source/s?defs=encodeHex">encodeHex</a> (byte[]) 
+		byte[] data
+	public static char[] <a class="d" name="encodeHex" href="/source/s?defs=encodeHex">encodeHex</a> (byte[], boolean) 
+		byte[] data
+		boolean toLowerCase
+	protected static char[] <a class="d" name="encodeHex" href="/source/s?defs=encodeHex">encodeHex</a> (byte[], char[]) 
+		int i
+		int j
+		byte[] data
+		char[] toDigits
+		int l
+		char[] out
+	public static java.lang.String <a class="d" name="encodeHexString" href="/source/s?defs=encodeHexString">encodeHexString</a> (byte[]) 
+		byte[] data
+	protected static int <a class="d" name="toDigit" href="/source/s?defs=toDigit">toDigit</a> (char, int)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		char ch
+		int index
+		int digit
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.lang.String) 
+		String csName
+	public byte[] <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (byte[])  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		java.io.UnsupportedEncodingException e
+		byte[] array
+	public java.lang.Object <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		char[] charArray
+		ClassCastException e
+		Object object
+	public byte[] <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (byte[]) 
+		byte[] array
+	public java.lang.Object <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		byte[] byteArray
+		ClassCastException e
+		java.io.UnsupportedEncodingException e
+		Object object
+	public java.lang.String <a class="d" name="getCharsetName" href="/source/s?defs=getCharsetName">getCharsetName</a> () 
+	public java.lang.String <a class="d" name="toString" href="/source/s?defs=toString">toString</a> () 
+	static void <a class="d" name="<clinit>" href="/source/s?defs=<clinit>"><clinit></a> () 
+}
+</pre><br/><b>org/apache/commons/codec/binary/StringUtils.class</b><pre><a href="/source/s?path=StringUtils.java">StringUtils.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.binary">org.apache.commons.codec.binary</a>
+public <a class="d" name="org.apache.commons.codec.binary.StringUtils" href="/source/s?defs=org.apache.commons.codec.binary.StringUtils">org.apache.commons.codec.binary.StringUtils</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> {
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public static byte[] <a class="d" name="getBytesIso8859_1" href="/source/s?defs=getBytesIso8859_1">getBytesIso8859_1</a> (java.lang.String) 
+		String string
+	public static byte[] <a class="d" name="getBytesUsAscii" href="/source/s?defs=getBytesUsAscii">getBytesUsAscii</a> (java.lang.String) 
+		String string
+	public static byte[] <a class="d" name="getBytesUtf16" href="/source/s?defs=getBytesUtf16">getBytesUtf16</a> (java.lang.String) 
+		String string
+	public static byte[] <a class="d" name="getBytesUtf16Be" href="/source/s?defs=getBytesUtf16Be">getBytesUtf16Be</a> (java.lang.String) 
+		String string
+	public static byte[] <a class="d" name="getBytesUtf16Le" href="/source/s?defs=getBytesUtf16Le">getBytesUtf16Le</a> (java.lang.String) 
+		String string
+	public static byte[] <a class="d" name="getBytesUtf8" href="/source/s?defs=getBytesUtf8">getBytesUtf8</a> (java.lang.String) 
+		String string
+	public static byte[] <a class="d" name="getBytesUnchecked" href="/source/s?defs=getBytesUnchecked">getBytesUnchecked</a> (java.lang.String, java.lang.String) 
+		java.io.UnsupportedEncodingException e
+		String string
+		String charsetName
+	private static java.lang.IllegalStateException <a class="d" name="newIllegalStateException" href="/source/s?defs=newIllegalStateException">newIllegalStateException</a> (java.lang.String, java.io.UnsupportedEncodingException) 
+		String charsetName
+		java.io.UnsupportedEncodingException e
+	public static java.lang.String <a class="d" name="newString" href="/source/s?defs=newString">newString</a> (byte[], java.lang.String) 
+		java.io.UnsupportedEncodingException e
+		byte[] bytes
+		String charsetName
+	public static java.lang.String <a class="d" name="newStringIso8859_1" href="/source/s?defs=newStringIso8859_1">newStringIso8859_1</a> (byte[]) 
+		byte[] bytes
+	public static java.lang.String <a class="d" name="newStringUsAscii" href="/source/s?defs=newStringUsAscii">newStringUsAscii</a> (byte[]) 
+		byte[] bytes
+	public static java.lang.String <a class="d" name="newStringUtf16" href="/source/s?defs=newStringUtf16">newStringUtf16</a> (byte[]) 
+		byte[] bytes
+	public static java.lang.String <a class="d" name="newStringUtf16Be" href="/source/s?defs=newStringUtf16Be">newStringUtf16Be</a> (byte[]) 
+		byte[] bytes
+	public static java.lang.String <a class="d" name="newStringUtf16Le" href="/source/s?defs=newStringUtf16Le">newStringUtf16Le</a> (byte[]) 
+		byte[] bytes
+	public static java.lang.String <a class="d" name="newStringUtf8" href="/source/s?defs=newStringUtf8">newStringUtf8</a> (byte[]) 
+		byte[] bytes
+}
+</pre><br/><b>org/apache/commons/codec/BinaryDecoder.class</b><pre><a href="/source/s?path=BinaryDecoder.java">BinaryDecoder.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec">org.apache.commons.codec</a>
+public abstract <a class="d" name="org.apache.commons.codec.BinaryDecoder" href="/source/s?defs=org.apache.commons.codec.BinaryDecoder">org.apache.commons.codec.BinaryDecoder</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.Decoder">org.apache.commons.codec.Decoder</a>  {
+	public abstract byte[] <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (byte[])  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+}
+</pre><br/><b>org/apache/commons/codec/BinaryEncoder.class</b><pre><a href="/source/s?path=BinaryEncoder.java">BinaryEncoder.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec">org.apache.commons.codec</a>
+public abstract <a class="d" name="org.apache.commons.codec.BinaryEncoder" href="/source/s?defs=org.apache.commons.codec.BinaryEncoder">org.apache.commons.codec.BinaryEncoder</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.Encoder">org.apache.commons.codec.Encoder</a>  {
+	public abstract byte[] <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (byte[])  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+}
+</pre><br/><b>org/apache/commons/codec/CharEncoding.class</b><pre><a href="/source/s?path=CharEncoding.java">CharEncoding.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec">org.apache.commons.codec</a>
+public <a class="d" name="org.apache.commons.codec.CharEncoding" href="/source/s?defs=org.apache.commons.codec.CharEncoding">org.apache.commons.codec.CharEncoding</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> {
+	public static final String <a class="d" name="ISO_8859_1" href="/source/s?defs=ISO_8859_1">ISO_8859_1</a>
+	public static final String <a class="d" name="US_ASCII" href="/source/s?defs=US_ASCII">US_ASCII</a>
+	public static final String <a class="d" name="UTF_16" href="/source/s?defs=UTF_16">UTF_16</a>
+	public static final String <a class="d" name="UTF_16BE" href="/source/s?defs=UTF_16BE">UTF_16BE</a>
+	public static final String <a class="d" name="UTF_16LE" href="/source/s?defs=UTF_16LE">UTF_16LE</a>
+	public static final String <a class="d" name="UTF_8" href="/source/s?defs=UTF_8">UTF_8</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+}
+</pre><br/><b>org/apache/commons/codec/Decoder.class</b><pre><a href="/source/s?path=Decoder.java">Decoder.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec">org.apache.commons.codec</a>
+public abstract <a class="d" name="org.apache.commons.codec.Decoder" href="/source/s?defs=org.apache.commons.codec.Decoder">org.apache.commons.codec.Decoder</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> {
+	public abstract java.lang.Object <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+}
+</pre><br/><b>org/apache/commons/codec/DecoderException.class</b><pre><a href="/source/s?path=DecoderException.java">DecoderException.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec">org.apache.commons.codec</a>
+public <a class="d" name="org.apache.commons.codec.DecoderException" href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> extends <a href="/source/s?defs=java.lang.Exception">java.lang.Exception</a> {
+	private static final long <a class="d" name="serialVersionUID" href="/source/s?defs=serialVersionUID">serialVersionUID</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.lang.String) 
+		String message
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.lang.String, java.lang.Throwable) 
+		String message
+		Throwable cause
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.lang.Throwable) 
+		Throwable cause
+}
+</pre><br/><b>org/apache/commons/codec/digest/DigestUtils.class</b><pre><a href="/source/s?path=DigestUtils.java">DigestUtils.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.digest">org.apache.commons.codec.digest</a>
+public <a class="d" name="org.apache.commons.codec.digest.DigestUtils" href="/source/s?defs=org.apache.commons.codec.digest.DigestUtils">org.apache.commons.codec.digest.DigestUtils</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> {
+	private static final int <a class="d" name="STREAM_BUFFER_LENGTH" href="/source/s?defs=STREAM_BUFFER_LENGTH">STREAM_BUFFER_LENGTH</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	private static byte[] <a class="d" name="digest" href="/source/s?defs=digest">digest</a> (java.security.MessageDigest, java.io.InputStream)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		java.security.MessageDigest digest
+		java.io.InputStream data
+		byte[] buffer
+		int read
+	private static byte[] <a class="d" name="getBytesUtf8" href="/source/s?defs=getBytesUtf8">getBytesUtf8</a> (java.lang.String) 
+		String data
+	static java.security.MessageDigest <a class="d" name="getDigest" href="/source/s?defs=getDigest">getDigest</a> (java.lang.String) 
+		java.security.NoSuchAlgorithmException e
+		String algorithm
+	private static java.security.MessageDigest <a class="d" name="getMd5Digest" href="/source/s?defs=getMd5Digest">getMd5Digest</a> () 
+	private static java.security.MessageDigest <a class="d" name="getSha256Digest" href="/source/s?defs=getSha256Digest">getSha256Digest</a> () 
+	private static java.security.MessageDigest <a class="d" name="getSha384Digest" href="/source/s?defs=getSha384Digest">getSha384Digest</a> () 
+	private static java.security.MessageDigest <a class="d" name="getSha512Digest" href="/source/s?defs=getSha512Digest">getSha512Digest</a> () 
+	private static java.security.MessageDigest <a class="d" name="getShaDigest" href="/source/s?defs=getShaDigest">getShaDigest</a> () 
+	public static byte[] <a class="d" name="md5" href="/source/s?defs=md5">md5</a> (byte[]) 
+		byte[] data
+	public static byte[] <a class="d" name="md5" href="/source/s?defs=md5">md5</a> (java.io.InputStream)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		java.io.InputStream data
+	public static byte[] <a class="d" name="md5" href="/source/s?defs=md5">md5</a> (java.lang.String) 
+		String data
+	public static java.lang.String <a class="d" name="md5Hex" href="/source/s?defs=md5Hex">md5Hex</a> (byte[]) 
+		byte[] data
+	public static java.lang.String <a class="d" name="md5Hex" href="/source/s?defs=md5Hex">md5Hex</a> (java.io.InputStream)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		java.io.InputStream data
+	public static java.lang.String <a class="d" name="md5Hex" href="/source/s?defs=md5Hex">md5Hex</a> (java.lang.String) 
+		String data
+	public static byte[] <a class="d" name="sha" href="/source/s?defs=sha">sha</a> (byte[]) 
+		byte[] data
+	public static byte[] <a class="d" name="sha" href="/source/s?defs=sha">sha</a> (java.io.InputStream)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		java.io.InputStream data
+	public static byte[] <a class="d" name="sha" href="/source/s?defs=sha">sha</a> (java.lang.String) 
+		String data
+	public static byte[] <a class="d" name="sha256" href="/source/s?defs=sha256">sha256</a> (byte[]) 
+		byte[] data
+	public static byte[] <a class="d" name="sha256" href="/source/s?defs=sha256">sha256</a> (java.io.InputStream)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		java.io.InputStream data
+	public static byte[] <a class="d" name="sha256" href="/source/s?defs=sha256">sha256</a> (java.lang.String) 
+		String data
+	public static java.lang.String <a class="d" name="sha256Hex" href="/source/s?defs=sha256Hex">sha256Hex</a> (byte[]) 
+		byte[] data
+	public static java.lang.String <a class="d" name="sha256Hex" href="/source/s?defs=sha256Hex">sha256Hex</a> (java.io.InputStream)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		java.io.InputStream data
+	public static java.lang.String <a class="d" name="sha256Hex" href="/source/s?defs=sha256Hex">sha256Hex</a> (java.lang.String) 
+		String data
+	public static byte[] <a class="d" name="sha384" href="/source/s?defs=sha384">sha384</a> (byte[]) 
+		byte[] data
+	public static byte[] <a class="d" name="sha384" href="/source/s?defs=sha384">sha384</a> (java.io.InputStream)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		java.io.InputStream data
+	public static byte[] <a class="d" name="sha384" href="/source/s?defs=sha384">sha384</a> (java.lang.String) 
+		String data
+	public static java.lang.String <a class="d" name="sha384Hex" href="/source/s?defs=sha384Hex">sha384Hex</a> (byte[]) 
+		byte[] data
+	public static java.lang.String <a class="d" name="sha384Hex" href="/source/s?defs=sha384Hex">sha384Hex</a> (java.io.InputStream)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		java.io.InputStream data
+	public static java.lang.String <a class="d" name="sha384Hex" href="/source/s?defs=sha384Hex">sha384Hex</a> (java.lang.String) 
+		String data
+	public static byte[] <a class="d" name="sha512" href="/source/s?defs=sha512">sha512</a> (byte[]) 
+		byte[] data
+	public static byte[] <a class="d" name="sha512" href="/source/s?defs=sha512">sha512</a> (java.io.InputStream)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		java.io.InputStream data
+	public static byte[] <a class="d" name="sha512" href="/source/s?defs=sha512">sha512</a> (java.lang.String) 
+		String data
+	public static java.lang.String <a class="d" name="sha512Hex" href="/source/s?defs=sha512Hex">sha512Hex</a> (byte[]) 
+		byte[] data
+	public static java.lang.String <a class="d" name="sha512Hex" href="/source/s?defs=sha512Hex">sha512Hex</a> (java.io.InputStream)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		java.io.InputStream data
+	public static java.lang.String <a class="d" name="sha512Hex" href="/source/s?defs=sha512Hex">sha512Hex</a> (java.lang.String) 
+		String data
+	public static java.lang.String <a class="d" name="shaHex" href="/source/s?defs=shaHex">shaHex</a> (byte[]) 
+		byte[] data
+	public static java.lang.String <a class="d" name="shaHex" href="/source/s?defs=shaHex">shaHex</a> (java.io.InputStream)  throws <a href="/source/s?defs=java.io.IOException">java.io.IOException</a> 
+		java.io.InputStream data
+	public static java.lang.String <a class="d" name="shaHex" href="/source/s?defs=shaHex">shaHex</a> (java.lang.String) 
+		String data
+}
+</pre><br/><b>org/apache/commons/codec/Encoder.class</b><pre><a href="/source/s?path=Encoder.java">Encoder.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec">org.apache.commons.codec</a>
+public abstract <a class="d" name="org.apache.commons.codec.Encoder" href="/source/s?defs=org.apache.commons.codec.Encoder">org.apache.commons.codec.Encoder</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> {
+	public abstract java.lang.Object <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+}
+</pre><br/><b>org/apache/commons/codec/EncoderException.class</b><pre><a href="/source/s?path=EncoderException.java">EncoderException.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec">org.apache.commons.codec</a>
+public <a class="d" name="org.apache.commons.codec.EncoderException" href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> extends <a href="/source/s?defs=java.lang.Exception">java.lang.Exception</a> {
+	private static final long <a class="d" name="serialVersionUID" href="/source/s?defs=serialVersionUID">serialVersionUID</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.lang.String) 
+		String message
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.lang.String, java.lang.Throwable) 
+		String message
+		Throwable cause
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.lang.Throwable) 
+		Throwable cause
+}
+</pre><br/><b>org/apache/commons/codec/language/Caverphone.class</b><pre><a href="/source/s?path=Caverphone.java">Caverphone.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.language">org.apache.commons.codec.language</a>
+public <a class="d" name="org.apache.commons.codec.language.Caverphone" href="/source/s?defs=org.apache.commons.codec.language.Caverphone">org.apache.commons.codec.language.Caverphone</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.StringEncoder">org.apache.commons.codec.StringEncoder</a>  {
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public java.lang.String <a class="d" name="caverphone" href="/source/s?defs=caverphone">caverphone</a> (java.lang.String) 
+		String txt
+	public java.lang.Object <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		Object pObject
+	public java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String) 
+		String pString
+	public boolean <a class="d" name="isCaverphoneEqual" href="/source/s?defs=isCaverphoneEqual">isCaverphoneEqual</a> (java.lang.String, java.lang.String) 
+		String str1
+		String str2
+}
+</pre><br/><b>org/apache/commons/codec/language/DoubleMetaphone$DoubleMetaphoneResult.class</b><pre><a href="/source/s?path=DoubleMetaphone.java">DoubleMetaphone.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.language">org.apache.commons.codec.language</a>
+public <a class="d" name="org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult" href="/source/s?defs=org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult">org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> {
+	private StringBuffer <a class="d" name="primary" href="/source/s?defs=primary">primary</a>
+	private StringBuffer <a class="d" name="alternate" href="/source/s?defs=alternate">alternate</a>
+	private int <a class="d" name="maxLength" href="/source/s?defs=maxLength">maxLength</a>
+	private final org.apache.commons.codec.language.DoubleMetaphone <a class="d" name="this$0" href="/source/s?defs=this$0">this$0</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (org.apache.commons.codec.language.DoubleMetaphone, int) 
+		int maxLength
+	public void <a class="d" name="append" href="/source/s?defs=append">append</a> (char) 
+		char value
+	public void <a class="d" name="append" href="/source/s?defs=append">append</a> (char, char) 
+		char primary
+		char alternate
+	public void <a class="d" name="appendPrimary" href="/source/s?defs=appendPrimary">appendPrimary</a> (char) 
+		char value
+	public void <a class="d" name="appendAlternate" href="/source/s?defs=appendAlternate">appendAlternate</a> (char) 
+		char value
+	public void <a class="d" name="append" href="/source/s?defs=append">append</a> (java.lang.String) 
+		String value
+	public void <a class="d" name="append" href="/source/s?defs=append">append</a> (java.lang.String, java.lang.String) 
+		String primary
+		String alternate
+	public void <a class="d" name="appendPrimary" href="/source/s?defs=appendPrimary">appendPrimary</a> (java.lang.String) 
+		String value
+		int addChars
+	public void <a class="d" name="appendAlternate" href="/source/s?defs=appendAlternate">appendAlternate</a> (java.lang.String) 
+		String value
+		int addChars
+	public java.lang.String <a class="d" name="getPrimary" href="/source/s?defs=getPrimary">getPrimary</a> () 
+	public java.lang.String <a class="d" name="getAlternate" href="/source/s?defs=getAlternate">getAlternate</a> () 
+	public boolean <a class="d" name="isComplete" href="/source/s?defs=isComplete">isComplete</a> () 
+}
+</pre><br/><b>org/apache/commons/codec/language/DoubleMetaphone.class</b><pre><a href="/source/s?path=DoubleMetaphone.java">DoubleMetaphone.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.language">org.apache.commons.codec.language</a>
+public <a class="d" name="org.apache.commons.codec.language.DoubleMetaphone" href="/source/s?defs=org.apache.commons.codec.language.DoubleMetaphone">org.apache.commons.codec.language.DoubleMetaphone</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.StringEncoder">org.apache.commons.codec.StringEncoder</a>  {
+	private static final String <a class="d" name="VOWELS" href="/source/s?defs=VOWELS">VOWELS</a>
+	private static final String[] <a class="d" name="SILENT_START" href="/source/s?defs=SILENT_START">SILENT_START</a>
+	private static final String[] <a class="d" name="L_R_N_M_B_H_F_V_W_SPACE" href="/source/s?defs=L_R_N_M_B_H_F_V_W_SPACE">L_R_N_M_B_H_F_V_W_SPACE</a>
+	private static final String[] <a class="d" name="ES_EP_EB_EL_EY_IB_IL_IN_IE_EI_ER" href="/source/s?defs=ES_EP_EB_EL_EY_IB_IL_IN_IE_EI_ER">ES_EP_EB_EL_EY_IB_IL_IN_IE_EI_ER</a>
+	private static final String[] <a class="d" name="L_T_K_S_N_M_B_Z" href="/source/s?defs=L_T_K_S_N_M_B_Z">L_T_K_S_N_M_B_Z</a>
+	protected int <a class="d" name="maxCodeLen" href="/source/s?defs=maxCodeLen">maxCodeLen</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public java.lang.String <a class="d" name="doubleMetaphone" href="/source/s?defs=doubleMetaphone">doubleMetaphone</a> (java.lang.String) 
+		String value
+	public java.lang.String <a class="d" name="doubleMetaphone" href="/source/s?defs=doubleMetaphone">doubleMetaphone</a> (java.lang.String, boolean) 
+		String value
+		boolean alternate
+		boolean slavoGermanic
+		int index
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+	public java.lang.Object <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		Object obj
+	public java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String) 
+		String value
+	public boolean <a class="d" name="isDoubleMetaphoneEqual" href="/source/s?defs=isDoubleMetaphoneEqual">isDoubleMetaphoneEqual</a> (java.lang.String, java.lang.String) 
+		String value1
+		String value2
+	public boolean <a class="d" name="isDoubleMetaphoneEqual" href="/source/s?defs=isDoubleMetaphoneEqual">isDoubleMetaphoneEqual</a> (java.lang.String, java.lang.String, boolean) 
+		String value1
+		String value2
+		boolean alternate
+	public int <a class="d" name="getMaxCodeLen" href="/source/s?defs=getMaxCodeLen">getMaxCodeLen</a> () 
+	public void <a class="d" name="setMaxCodeLen" href="/source/s?defs=setMaxCodeLen">setMaxCodeLen</a> (int) 
+		int maxCodeLen
+	private int <a class="d" name="handleAEIOUY" href="/source/s?defs=handleAEIOUY">handleAEIOUY</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+	private int <a class="d" name="handleC" href="/source/s?defs=handleC">handleC</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+	private int <a class="d" name="handleCC" href="/source/s?defs=handleCC">handleCC</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+	private int <a class="d" name="handleCH" href="/source/s?defs=handleCH">handleCH</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+	private int <a class="d" name="handleD" href="/source/s?defs=handleD">handleD</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+	private int <a class="d" name="handleG" href="/source/s?defs=handleG">handleG</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int, boolean) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+		boolean slavoGermanic
+	private int <a class="d" name="handleGH" href="/source/s?defs=handleGH">handleGH</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+	private int <a class="d" name="handleH" href="/source/s?defs=handleH">handleH</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+	private int <a class="d" name="handleJ" href="/source/s?defs=handleJ">handleJ</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int, boolean) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+		boolean slavoGermanic
+	private int <a class="d" name="handleL" href="/source/s?defs=handleL">handleL</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+	private int <a class="d" name="handleP" href="/source/s?defs=handleP">handleP</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+	private int <a class="d" name="handleR" href="/source/s?defs=handleR">handleR</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int, boolean) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+		boolean slavoGermanic
+	private int <a class="d" name="handleS" href="/source/s?defs=handleS">handleS</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int, boolean) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+		boolean slavoGermanic
+	private int <a class="d" name="handleSC" href="/source/s?defs=handleSC">handleSC</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+	private int <a class="d" name="handleT" href="/source/s?defs=handleT">handleT</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+	private int <a class="d" name="handleW" href="/source/s?defs=handleW">handleW</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+	private int <a class="d" name="handleX" href="/source/s?defs=handleX">handleX</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+	private int <a class="d" name="handleZ" href="/source/s?defs=handleZ">handleZ</a> (java.lang.String, org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult, int, boolean) 
+		String value
+		org.apache.commons.codec.language.DoubleMetaphone$DoubleMetaphoneResult result
+		int index
+		boolean slavoGermanic
+	private boolean <a class="d" name="conditionC0" href="/source/s?defs=conditionC0">conditionC0</a> (java.lang.String, int) 
+		char c
+		String value
+		int index
+	private boolean <a class="d" name="conditionCH0" href="/source/s?defs=conditionCH0">conditionCH0</a> (java.lang.String, int) 
+		String value
+		int index
+	private boolean <a class="d" name="conditionCH1" href="/source/s?defs=conditionCH1">conditionCH1</a> (java.lang.String, int) 
+		String value
+		int index
+	private boolean <a class="d" name="conditionL0" href="/source/s?defs=conditionL0">conditionL0</a> (java.lang.String, int) 
+		String value
+		int index
+	private boolean <a class="d" name="conditionM0" href="/source/s?defs=conditionM0">conditionM0</a> (java.lang.String, int) 
+		String value
+		int index
+	private boolean <a class="d" name="isSlavoGermanic" href="/source/s?defs=isSlavoGermanic">isSlavoGermanic</a> (java.lang.String) 
+		String value
+	private boolean <a class="d" name="isVowel" href="/source/s?defs=isVowel">isVowel</a> (char) 
+		char ch
+	private boolean <a class="d" name="isSilentStart" href="/source/s?defs=isSilentStart">isSilentStart</a> (java.lang.String) 
+		int i
+		String value
+		boolean result
+	private java.lang.String <a class="d" name="cleanInput" href="/source/s?defs=cleanInput">cleanInput</a> (java.lang.String) 
+		String input
+	protected char <a class="d" name="charAt" href="/source/s?defs=charAt">charAt</a> (java.lang.String, int) 
+		String value
+		int index
+	private static boolean <a class="d" name="contains" href="/source/s?defs=contains">contains</a> (java.lang.String, int, int, java.lang.String) 
+		String value
+		int start
+		int length
+		String criteria
+	private static boolean <a class="d" name="contains" href="/source/s?defs=contains">contains</a> (java.lang.String, int, int, java.lang.String, java.lang.String) 
+		String value
+		int start
+		int length
+		String criteria1
+		String criteria2
+	private static boolean <a class="d" name="contains" href="/source/s?defs=contains">contains</a> (java.lang.String, int, int, java.lang.String, java.lang.String, java.lang.String) 
+		String value
+		int start
+		int length
+		String criteria1
+		String criteria2
+		String criteria3
+	private static boolean <a class="d" name="contains" href="/source/s?defs=contains">contains</a> (java.lang.String, int, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String) 
+		String value
+		int start
+		int length
+		String criteria1
+		String criteria2
+		String criteria3
+		String criteria4
+	private static boolean <a class="d" name="contains" href="/source/s?defs=contains">contains</a> (java.lang.String, int, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) 
+		String value
+		int start
+		int length
+		String criteria1
+		String criteria2
+		String criteria3
+		String criteria4
+		String criteria5
+	private static boolean <a class="d" name="contains" href="/source/s?defs=contains">contains</a> (java.lang.String, int, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) 
+		String value
+		int start
+		int length
+		String criteria1
+		String criteria2
+		String criteria3
+		String criteria4
+		String criteria5
+		String criteria6
+	protected static boolean <a class="d" name="contains" href="/source/s?defs=contains">contains</a> (java.lang.String, int, int, java.lang.String[]) 
+		int i
+		String target
+		String value
+		int start
+		int length
+		String[] criteria
+		boolean result
+	static void <a class="d" name="<clinit>" href="/source/s?defs=<clinit>"><clinit></a> () 
+}
+</pre><br/><b>org/apache/commons/codec/language/Metaphone.class</b><pre><a href="/source/s?path=Metaphone.java">Metaphone.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.language">org.apache.commons.codec.language</a>
+public <a class="d" name="org.apache.commons.codec.language.Metaphone" href="/source/s?defs=org.apache.commons.codec.language.Metaphone">org.apache.commons.codec.language.Metaphone</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.StringEncoder">org.apache.commons.codec.StringEncoder</a>  {
+	private static final String <a class="d" name="VOWELS" href="/source/s?defs=VOWELS">VOWELS</a>
+	private static final String <a class="d" name="FRONTV" href="/source/s?defs=FRONTV">FRONTV</a>
+	private static final String <a class="d" name="VARSON" href="/source/s?defs=VARSON">VARSON</a>
+	private int <a class="d" name="maxCodeLen" href="/source/s?defs=maxCodeLen">maxCodeLen</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public java.lang.String <a class="d" name="metaphone" href="/source/s?defs=metaphone">metaphone</a> (java.lang.String) 
+		char symb
+		String txt
+		boolean hard
+		char[] inwd
+		StringBuffer local
+		StringBuffer code
+		int wdsz
+		int n
+	private boolean <a class="d" name="isVowel" href="/source/s?defs=isVowel">isVowel</a> (java.lang.StringBuffer, int) 
+		StringBuffer string
+		int index
+	private boolean <a class="d" name="isPreviousChar" href="/source/s?defs=isPreviousChar">isPreviousChar</a> (java.lang.StringBuffer, int, char) 
+		StringBuffer string
+		int index
+		char c
+		boolean matches
+	private boolean <a class="d" name="isNextChar" href="/source/s?defs=isNextChar">isNextChar</a> (java.lang.StringBuffer, int, char) 
+		StringBuffer string
+		int index
+		char c
+		boolean matches
+	private boolean <a class="d" name="regionMatch" href="/source/s?defs=regionMatch">regionMatch</a> (java.lang.StringBuffer, int, java.lang.String) 
+		String substring
+		StringBuffer string
+		int index
+		String test
+		boolean matches
+	private boolean <a class="d" name="isLastChar" href="/source/s?defs=isLastChar">isLastChar</a> (int, int) 
+		int wdsz
+		int n
+	public java.lang.Object <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		Object pObject
+	public java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String) 
+		String pString
+	public boolean <a class="d" name="isMetaphoneEqual" href="/source/s?defs=isMetaphoneEqual">isMetaphoneEqual</a> (java.lang.String, java.lang.String) 
+		String str1
+		String str2
+	public int <a class="d" name="getMaxCodeLen" href="/source/s?defs=getMaxCodeLen">getMaxCodeLen</a> () 
+	public void <a class="d" name="setMaxCodeLen" href="/source/s?defs=setMaxCodeLen">setMaxCodeLen</a> (int) 
+		int maxCodeLen
+}
+</pre><br/><b>org/apache/commons/codec/language/RefinedSoundex.class</b><pre><a href="/source/s?path=RefinedSoundex.java">RefinedSoundex.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.language">org.apache.commons.codec.language</a>
+public <a class="d" name="org.apache.commons.codec.language.RefinedSoundex" href="/source/s?defs=org.apache.commons.codec.language.RefinedSoundex">org.apache.commons.codec.language.RefinedSoundex</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.StringEncoder">org.apache.commons.codec.StringEncoder</a>  {
+	public static final String <a class="d" name="US_ENGLISH_MAPPING_STRING" href="/source/s?defs=US_ENGLISH_MAPPING_STRING">US_ENGLISH_MAPPING_STRING</a>
+	public static final char[] <a class="d" name="US_ENGLISH_MAPPING" href="/source/s?defs=US_ENGLISH_MAPPING">US_ENGLISH_MAPPING</a>
+	private final char[] <a class="d" name="soundexMapping" href="/source/s?defs=soundexMapping">soundexMapping</a>
+	public static final org.apache.commons.codec.language.RefinedSoundex <a class="d" name="US_ENGLISH" href="/source/s?defs=US_ENGLISH">US_ENGLISH</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (char[]) 
+		char[] mapping
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.lang.String) 
+		String mapping
+	public int <a class="d" name="difference" href="/source/s?defs=difference">difference</a> (java.lang.String, java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		String s1
+		String s2
+	public java.lang.Object <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		Object pObject
+	public java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String) 
+		String pString
+	char <a class="d" name="getMappingCode" href="/source/s?defs=getMappingCode">getMappingCode</a> (char) 
+		char c
+	public java.lang.String <a class="d" name="soundex" href="/source/s?defs=soundex">soundex</a> (java.lang.String) 
+		char current
+		int i
+		String str
+		StringBuffer sBuf
+		char last
+	static void <a class="d" name="<clinit>" href="/source/s?defs=<clinit>"><clinit></a> () 
+}
+</pre><br/><b>org/apache/commons/codec/language/Soundex.class</b><pre><a href="/source/s?path=Soundex.java">Soundex.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.language">org.apache.commons.codec.language</a>
+public <a class="d" name="org.apache.commons.codec.language.Soundex" href="/source/s?defs=org.apache.commons.codec.language.Soundex">org.apache.commons.codec.language.Soundex</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.StringEncoder">org.apache.commons.codec.StringEncoder</a>  {
+	public static final String <a class="d" name="US_ENGLISH_MAPPING_STRING" href="/source/s?defs=US_ENGLISH_MAPPING_STRING">US_ENGLISH_MAPPING_STRING</a>
+	public static final char[] <a class="d" name="US_ENGLISH_MAPPING" href="/source/s?defs=US_ENGLISH_MAPPING">US_ENGLISH_MAPPING</a>
+	public static final org.apache.commons.codec.language.Soundex <a class="d" name="US_ENGLISH" href="/source/s?defs=US_ENGLISH">US_ENGLISH</a>
+	private int <a class="d" name="maxLength" href="/source/s?defs=maxLength">maxLength</a>
+	private final char[] <a class="d" name="soundexMapping" href="/source/s?defs=soundexMapping">soundexMapping</a>
+	public int <a class="d" name="difference" href="/source/s?defs=difference">difference</a> (java.lang.String, java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		String s1
+		String s2
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (char[]) 
+		char[] mapping
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.lang.String) 
+		String mapping
+	public java.lang.Object <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		Object pObject
+	public java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String) 
+		String pString
+	private char <a class="d" name="getMappingCode" href="/source/s?defs=getMappingCode">getMappingCode</a> (java.lang.String, int) 
+		char preHWChar
+		char firstCode
+		char hwChar
+		String str
+		int index
+		char mappedChar
+	public int <a class="d" name="getMaxLength" href="/source/s?defs=getMaxLength">getMaxLength</a> () 
+	private char[] <a class="d" name="getSoundexMapping" href="/source/s?defs=getSoundexMapping">getSoundexMapping</a> () 
+	private char <a class="d" name="map" href="/source/s?defs=map">map</a> (char) 
+		char ch
+		int index
+	public void <a class="d" name="setMaxLength" href="/source/s?defs=setMaxLength">setMaxLength</a> (int) 
+		int maxLength
+	public java.lang.String <a class="d" name="soundex" href="/source/s?defs=soundex">soundex</a> (java.lang.String) 
+		char mapped
+		String str
+		char[] out
+		char last
+		int incount
+		int count
+	static void <a class="d" name="<clinit>" href="/source/s?defs=<clinit>"><clinit></a> () 
+}
+</pre><br/><b>org/apache/commons/codec/language/SoundexUtils.class</b><pre><a href="/source/s?path=SoundexUtils.java">SoundexUtils.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.language">org.apache.commons.codec.language</a>
+final <a class="d" name="org.apache.commons.codec.language.SoundexUtils" href="/source/s?defs=org.apache.commons.codec.language.SoundexUtils">org.apache.commons.codec.language.SoundexUtils</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> {
+	void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	static java.lang.String <a class="d" name="clean" href="/source/s?defs=clean">clean</a> (java.lang.String) 
+		int i
+		String str
+		int len
+		char[] chars
+		int count
+	static int <a class="d" name="difference" href="/source/s?defs=difference">difference</a> (org.apache.commons.codec.StringEncoder, java.lang.String, java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		org.apache.commons.codec.StringEncoder encoder
+		String s1
+		String s2
+	static int <a class="d" name="differenceEncoded" href="/source/s?defs=differenceEncoded">differenceEncoded</a> (java.lang.String, java.lang.String) 
+		int i
+		String es1
+		String es2
+		int lengthToMatch
+		int diff
+}
+</pre><br/><b>org/apache/commons/codec/net/BCodec.class</b><pre><a href="/source/s?path=BCodec.java">BCodec.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.net">org.apache.commons.codec.net</a>
+public <a class="d" name="org.apache.commons.codec.net.BCodec" href="/source/s?defs=org.apache.commons.codec.net.BCodec">org.apache.commons.codec.net.BCodec</a> extends <a href="/source/s?defs=org.apache.commons.codec.net.RFC1522Codec">org.apache.commons.codec.net.RFC1522Codec</a> implements <a href="/source/s?defs=org.apache.commons.codec.StringEncoder">org.apache.commons.codec.StringEncoder</a> <a href="/source/s?defs=org.apache.commons.codec.StringDecoder">org.apache.commons.codec.StringDecoder</a>  {
+	private final String <a class="d" name="charset" href="/source/s?defs=charset">charset</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.lang.String) 
+		String charset
+	protected java.lang.String <a class="d" name="getEncoding" href="/source/s?defs=getEncoding">getEncoding</a> () 
+	protected byte[] <a class="d" name="doEncoding" href="/source/s?defs=doEncoding">doEncoding</a> (byte[]) 
+		byte[] bytes
+	protected byte[] <a class="d" name="doDecoding" href="/source/s?defs=doDecoding">doDecoding</a> (byte[]) 
+		byte[] bytes
+	public java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String, java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		java.io.UnsupportedEncodingException e
+		String value
+		String charset
+	public java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		String value
+	public java.lang.String <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		java.io.UnsupportedEncodingException e
+		String value
+	public java.lang.Object <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		Object value
+	public java.lang.Object <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		Object value
+	public java.lang.String <a class="d" name="getDefaultCharset" href="/source/s?defs=getDefaultCharset">getDefaultCharset</a> () 
+}
+</pre><br/><b>org/apache/commons/codec/net/QCodec.class</b><pre><a href="/source/s?path=QCodec.java">QCodec.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.net">org.apache.commons.codec.net</a>
+public <a class="d" name="org.apache.commons.codec.net.QCodec" href="/source/s?defs=org.apache.commons.codec.net.QCodec">org.apache.commons.codec.net.QCodec</a> extends <a href="/source/s?defs=org.apache.commons.codec.net.RFC1522Codec">org.apache.commons.codec.net.RFC1522Codec</a> implements <a href="/source/s?defs=org.apache.commons.codec.StringEncoder">org.apache.commons.codec.StringEncoder</a> <a href="/source/s?defs=org.apache.commons.codec.StringDecoder">org.apache.commons.codec.StringDecoder</a>  {
+	private final String <a class="d" name="charset" href="/source/s?defs=charset">charset</a>
+	private static final java.util.BitSet <a class="d" name="PRINTABLE_CHARS" href="/source/s?defs=PRINTABLE_CHARS">PRINTABLE_CHARS</a>
+	private static final byte <a class="d" name="BLANK" href="/source/s?defs=BLANK">BLANK</a>
+	private static final byte <a class="d" name="UNDERSCORE" href="/source/s?defs=UNDERSCORE">UNDERSCORE</a>
+	private boolean <a class="d" name="encodeBlanks" href="/source/s?defs=encodeBlanks">encodeBlanks</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.lang.String) 
+		String charset
+	protected java.lang.String <a class="d" name="getEncoding" href="/source/s?defs=getEncoding">getEncoding</a> () 
+	protected byte[] <a class="d" name="doEncoding" href="/source/s?defs=doEncoding">doEncoding</a> (byte[]) 
+		int i
+		byte[] bytes
+		byte[] data
+	protected byte[] <a class="d" name="doDecoding" href="/source/s?defs=doDecoding">doDecoding</a> (byte[])  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		int i
+		byte b
+		int i
+		byte[] tmp
+		byte[] bytes
+		boolean hasUnderscores
+	public java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String, java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		java.io.UnsupportedEncodingException e
+		String pString
+		String charset
+	public java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		String pString
+	public java.lang.String <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		java.io.UnsupportedEncodingException e
+		String pString
+	public java.lang.Object <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		Object pObject
+	public java.lang.Object <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		Object pObject
+	public java.lang.String <a class="d" name="getDefaultCharset" href="/source/s?defs=getDefaultCharset">getDefaultCharset</a> () 
+	public boolean <a class="d" name="isEncodeBlanks" href="/source/s?defs=isEncodeBlanks">isEncodeBlanks</a> () 
+	public void <a class="d" name="setEncodeBlanks" href="/source/s?defs=setEncodeBlanks">setEncodeBlanks</a> (boolean) 
+		boolean b
+	static void <a class="d" name="<clinit>" href="/source/s?defs=<clinit>"><clinit></a> () 
+		int i
+		int i
+		int i
+}
+</pre><br/><b>org/apache/commons/codec/net/QuotedPrintableCodec.class</b><pre><a href="/source/s?path=QuotedPrintableCodec.java">QuotedPrintableCodec.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.net">org.apache.commons.codec.net</a>
+public <a class="d" name="org.apache.commons.codec.net.QuotedPrintableCodec" href="/source/s?defs=org.apache.commons.codec.net.QuotedPrintableCodec">org.apache.commons.codec.net.QuotedPrintableCodec</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.BinaryEncoder">org.apache.commons.codec.BinaryEncoder</a> <a href="/source/s?defs=org.apache.commons.codec.BinaryDecoder">org.apache.commons.codec.BinaryDecoder</a> <a href="/source/s?defs=org.apache.commons.codec.StringEncoder">org.apache.commons.codec.StringEncoder</a> <a href="/source/s?defs=org.apache.commons.codec.StringDecoder">org.apache.commons.codec.StringDecoder</a>  {
+	private final String <a class="d" name="charset" href="/source/s?defs=charset">charset</a>
+	private static final java.util.BitSet <a class="d" name="PRINTABLE_CHARS" href="/source/s?defs=PRINTABLE_CHARS">PRINTABLE_CHARS</a>
+	private static final byte <a class="d" name="ESCAPE_CHAR" href="/source/s?defs=ESCAPE_CHAR">ESCAPE_CHAR</a>
+	private static final byte <a class="d" name="TAB" href="/source/s?defs=TAB">TAB</a>
+	private static final byte <a class="d" name="SPACE" href="/source/s?defs=SPACE">SPACE</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.lang.String) 
+		String charset
+	private static final void <a class="d" name="encodeQuotedPrintable" href="/source/s?defs=encodeQuotedPrintable">encodeQuotedPrintable</a> (int, java.io.ByteArrayOutputStream) 
+		int b
+		java.io.ByteArrayOutputStream buffer
+		char hex1
+		char hex2
+	public static final byte[] <a class="d" name="encodeQuotedPrintable" href="/source/s?defs=encodeQuotedPrintable">encodeQuotedPrintable</a> (java.util.BitSet, byte[]) 
+		int b
+		int i
+		java.util.BitSet printable
+		byte[] bytes
+		java.io.ByteArrayOutputStream buffer
+	public static final byte[] <a class="d" name="decodeQuotedPrintable" href="/source/s?defs=decodeQuotedPrintable">decodeQuotedPrintable</a> (byte[])  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		int u
+		int l
+		ArrayIndexOutOfBoundsException e
+		int b
+		int i
+		byte[] bytes
+		java.io.ByteArrayOutputStream buffer
+	public byte[] <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (byte[]) 
+		byte[] bytes
+	public byte[] <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (byte[])  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		byte[] bytes
+	public java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		java.io.UnsupportedEncodingException e
+		String pString
+	public java.lang.String <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.String, java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> <a href="/source/s?defs=java.io.UnsupportedEncodingException">java.io.UnsupportedEncodingException</a> 
+		String pString
+		String charset
+	public java.lang.String <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		java.io.UnsupportedEncodingException e
+		String pString
+	public java.lang.Object <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		Object pObject
+	public java.lang.Object <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		Object pObject
+	public java.lang.String <a class="d" name="getDefaultCharset" href="/source/s?defs=getDefaultCharset">getDefaultCharset</a> () 
+	public java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String, java.lang.String)  throws <a href="/source/s?defs=java.io.UnsupportedEncodingException">java.io.UnsupportedEncodingException</a> 
+		String pString
+		String charset
+	static void <a class="d" name="<clinit>" href="/source/s?defs=<clinit>"><clinit></a> () 
+		int i
+		int i
+}
+</pre><br/><b>org/apache/commons/codec/net/RFC1522Codec.class</b><pre><a href="/source/s?path=RFC1522Codec.java">RFC1522Codec.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.net">org.apache.commons.codec.net</a>
+abstract <a class="d" name="org.apache.commons.codec.net.RFC1522Codec" href="/source/s?defs=org.apache.commons.codec.net.RFC1522Codec">org.apache.commons.codec.net.RFC1522Codec</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> {
+	protected static final char <a class="d" name="SEP" href="/source/s?defs=SEP">SEP</a>
+	protected static final String <a class="d" name="POSTFIX" href="/source/s?defs=POSTFIX">POSTFIX</a>
+	protected static final String <a class="d" name="PREFIX" href="/source/s?defs=PREFIX">PREFIX</a>
+	void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	protected java.lang.String <a class="d" name="encodeText" href="/source/s?defs=encodeText">encodeText</a> (java.lang.String, java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> <a href="/source/s?defs=java.io.UnsupportedEncodingException">java.io.UnsupportedEncodingException</a> 
+		String text
+		String charset
+		StringBuffer buffer
+		byte[] rawdata
+	protected java.lang.String <a class="d" name="decodeText" href="/source/s?defs=decodeText">decodeText</a> (java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> <a href="/source/s?defs=java.io.UnsupportedEncodingException">java.io.UnsupportedEncodingException</a> 
+		String text
+		int terminator
+		int from
+		int to
+		String charset
+		String encoding
+		byte[] data
+	protected abstract java.lang.String <a class="d" name="getEncoding" href="/source/s?defs=getEncoding">getEncoding</a> () 
+	protected abstract byte[] <a class="d" name="doEncoding" href="/source/s?defs=doEncoding">doEncoding</a> (byte[])  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+	protected abstract byte[] <a class="d" name="doDecoding" href="/source/s?defs=doDecoding">doDecoding</a> (byte[])  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+}
+</pre><br/><b>org/apache/commons/codec/net/URLCodec.class</b><pre><a href="/source/s?path=URLCodec.java">URLCodec.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.net">org.apache.commons.codec.net</a>
+public <a class="d" name="org.apache.commons.codec.net.URLCodec" href="/source/s?defs=org.apache.commons.codec.net.URLCodec">org.apache.commons.codec.net.URLCodec</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.BinaryEncoder">org.apache.commons.codec.BinaryEncoder</a> <a href="/source/s?defs=org.apache.commons.codec.BinaryDecoder">org.apache.commons.codec.BinaryDecoder</a> <a href="/source/s?defs=org.apache.commons.codec.StringEncoder">org.apache.commons.codec.StringEncoder</a> <a href="/source/s?defs=org.apache.commons.codec.StringDecoder">org.apache.commons.codec.StringDecoder</a>  {
+	static final int <a class="d" name="RADIX" href="/source/s?defs=RADIX">RADIX</a>
+	protected String <a class="d" name="charset" href="/source/s?defs=charset">charset</a>
+	protected static byte <a class="d" name="ESCAPE_CHAR" href="/source/s?defs=ESCAPE_CHAR">ESCAPE_CHAR</a>
+	protected static final java.util.BitSet <a class="d" name="WWW_FORM_URL" href="/source/s?defs=WWW_FORM_URL">WWW_FORM_URL</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (java.lang.String) 
+		String charset
+	public static final byte[] <a class="d" name="encodeUrl" href="/source/s?defs=encodeUrl">encodeUrl</a> (java.util.BitSet, byte[]) 
+		char hex1
+		char hex2
+		int b
+		int i
+		java.util.BitSet urlsafe
+		byte[] bytes
+		java.io.ByteArrayOutputStream buffer
+	public static final byte[] <a class="d" name="decodeUrl" href="/source/s?defs=decodeUrl">decodeUrl</a> (byte[])  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		int u
+		int l
+		ArrayIndexOutOfBoundsException e
+		int b
+		int i
+		byte[] bytes
+		java.io.ByteArrayOutputStream buffer
+	public byte[] <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (byte[]) 
+		byte[] bytes
+	public byte[] <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (byte[])  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		byte[] bytes
+	public java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String, java.lang.String)  throws <a href="/source/s?defs=java.io.UnsupportedEncodingException">java.io.UnsupportedEncodingException</a> 
+		String pString
+		String charset
+	public java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		java.io.UnsupportedEncodingException e
+		String pString
+	public java.lang.String <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.String, java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> <a href="/source/s?defs=java.io.UnsupportedEncodingException">java.io.UnsupportedEncodingException</a> 
+		String pString
+		String charset
+	public java.lang.String <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		java.io.UnsupportedEncodingException e
+		String pString
+	public java.lang.Object <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+		Object pObject
+	public java.lang.Object <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.Object)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		Object pObject
+	public java.lang.String <a class="d" name="getEncoding" href="/source/s?defs=getEncoding">getEncoding</a> () 
+	public java.lang.String <a class="d" name="getDefaultCharset" href="/source/s?defs=getDefaultCharset">getDefaultCharset</a> () 
+	static void <a class="d" name="<clinit>" href="/source/s?defs=<clinit>"><clinit></a> () 
+		int i
+		int i
+		int i
+}
+</pre><br/><b>org/apache/commons/codec/net/Utils.class</b><pre><a href="/source/s?path=Utils.java">Utils.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec.net">org.apache.commons.codec.net</a>
+ <a class="d" name="org.apache.commons.codec.net.Utils" href="/source/s?defs=org.apache.commons.codec.net.Utils">org.apache.commons.codec.net.Utils</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> {
+	void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	static int <a class="d" name="digit16" href="/source/s?defs=digit16">digit16</a> (byte)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+		byte b
+		int i
+}
+</pre><br/><b>org/apache/commons/codec/StringDecoder.class</b><pre><a href="/source/s?path=StringDecoder.java">StringDecoder.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec">org.apache.commons.codec</a>
+public abstract <a class="d" name="org.apache.commons.codec.StringDecoder" href="/source/s?defs=org.apache.commons.codec.StringDecoder">org.apache.commons.codec.StringDecoder</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.Decoder">org.apache.commons.codec.Decoder</a>  {
+	public abstract java.lang.String <a class="d" name="decode" href="/source/s?defs=decode">decode</a> (java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.DecoderException">org.apache.commons.codec.DecoderException</a> 
+}
+</pre><br/><b>org/apache/commons/codec/StringEncoder.class</b><pre><a href="/source/s?path=StringEncoder.java">StringEncoder.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec">org.apache.commons.codec</a>
+public abstract <a class="d" name="org.apache.commons.codec.StringEncoder" href="/source/s?defs=org.apache.commons.codec.StringEncoder">org.apache.commons.codec.StringEncoder</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=org.apache.commons.codec.Encoder">org.apache.commons.codec.Encoder</a>  {
+	public abstract java.lang.String <a class="d" name="encode" href="/source/s?defs=encode">encode</a> (java.lang.String)  throws <a href="/source/s?defs=org.apache.commons.codec.EncoderException">org.apache.commons.codec.EncoderException</a> 
+}
+</pre><br/><b>org/apache/commons/codec/StringEncoderComparator.class</b><pre><a href="/source/s?path=StringEncoderComparator.java">StringEncoderComparator.java</a>
+package <a href="/source/s?defs=org.apache.commons.codec">org.apache.commons.codec</a>
+public <a class="d" name="org.apache.commons.codec.StringEncoderComparator" href="/source/s?defs=org.apache.commons.codec.StringEncoderComparator">org.apache.commons.codec.StringEncoderComparator</a> extends <a href="/source/s?defs=java.lang.Object">java.lang.Object</a> implements <a href="/source/s?defs=java.util.Comparator">java.util.Comparator</a>  {
+	private final org.apache.commons.codec.StringEncoder <a class="d" name="stringEncoder" href="/source/s?defs=stringEncoder">stringEncoder</a>
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> () 
+	public void <a class="d" name="<init>" href="/source/s?defs=<init>"><init></a> (org.apache.commons.codec.StringEncoder) 
+		org.apache.commons.codec.StringEncoder stringEncoder
+	public int <a class="d" name="compare" href="/source/s?defs=compare">compare</a> (java.lang.Object, java.lang.Object) 
+		Comparable s1
+		Comparable s2
+		org.apache.commons.codec.EncoderException ee
+		Object o1
+		Object o2
+		int compareCode
+}
+</pre><br/><b>META-INF/maven/</b><br/><b>META-INF/maven/commons-codec/</b><br/><b>META-INF/maven/commons-codec/commons-codec/</b><br/><b>META-INF/maven/commons-codec/commons-codec/pom.xml</b><br/><b>META-INF/maven/commons-codec/commons-codec/pom.properties</b></pre>
+</div>
+    <div id="footer">
+<p><a href="http://opengrok.github.com/OpenGrok/"
+ title="Served by OpenGrok"><span id="fti"></span></a></p>
+<p>
+    <a href="http://www.rrzn.uni-hannover.de"><span id="partner_rrzn"></span></a>
+    <a href="http://www.uni-hannover.de"><span id="partner_luh"></span></a>
+</p>
+<p><a href="http://www.metager.de/impressum.html">Impressum (legal notice)</a></p>
+    
+    </div>
+    </div>
+</div>
+</body>
+</html>
+
