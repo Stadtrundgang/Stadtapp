@@ -54,7 +54,16 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
             
             
             
-            
+            mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                @Override
+                public void onMapClick(LatLng point) {
+                    MarkerOptions marker = new MarkerOptions().position(
+                            new LatLng(point.latitude, point.longitude)).title("New Marker");
+
+                   mMap.addMarker(marker);
+                System.out.println(point.latitude+"---"+ point.longitude);  
+                }
+            });
             
             
     return view;
