@@ -466,18 +466,21 @@ containing a value of this type.
         public static final int ic_plusone_small_off_client=0x7f02001e;
         public static final int ic_plusone_standard_off_client=0x7f02001f;
         public static final int ic_plusone_tall_off_client=0x7f020020;
-        public static final int logo_hfu=0x7f020021;
-        public static final int map_logo=0x7f020022;
-        public static final int photo_logo=0x7f020023;
-        public static final int powered_by_google_dark=0x7f020024;
-        public static final int powered_by_google_light=0x7f020025;
+        public static final int icon_vorschau=0x7f020021;
+        public static final int logo_hfu=0x7f020022;
+        public static final int map_logo=0x7f020023;
+        public static final int photo_logo=0x7f020024;
+        public static final int powered_by_google_dark=0x7f020025;
+        public static final int powered_by_google_light=0x7f020026;
     }
     public static final class id {
-        public static final int action_settings=0x7f0c0024;
+        public static final int action_settings=0x7f0c0029;
         public static final int activity_main=0x7f0c0017;
         public static final int adjust_height=0x7f0c0000;
         public static final int adjust_width=0x7f0c0001;
         public static final int book_now=0x7f0c0010;
+        public static final int button=0x7f0c0027;
+        public static final int button1=0x7f0c0028;
         public static final int button_ChangeCamera=0x7f0c001f;
         public static final int button_capture=0x7f0c0020;
         public static final int buttonsLayout=0x7f0c001e;
@@ -493,6 +496,7 @@ containing a value of this type.
         public static final int holo_dark=0x7f0c0007;
         public static final int holo_light=0x7f0c0008;
         public static final int hybrid=0x7f0c0003;
+        public static final int imageview=0x7f0c0026;
         public static final int imgHFU=0x7f0c0019;
         public static final int imgMOS=0x7f0c0018;
         public static final int location_map=0x7f0c0021;
@@ -509,6 +513,8 @@ containing a value of this type.
         public static final int strict_sandbox=0x7f0c000b;
         public static final int tap_text=0x7f0c001b;
         public static final int terrain=0x7f0c0006;
+        public static final int textView1=0x7f0c0025;
+        public static final int textView2=0x7f0c0024;
         public static final int wrap_content=0x7f0c000f;
     }
     public static final class integer {
