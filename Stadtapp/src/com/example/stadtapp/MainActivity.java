@@ -20,6 +20,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.example.stadtapp.R;
+import com.example.stadtapp.tabs.BilderFragmentTab;
+import com.example.stadtapp.tabs.MapFragmentTab;
+import com.example.stadtapp.tabs.PhotoFragmentTab;
+import com.example.stadtapp.tabs.TabListener;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
