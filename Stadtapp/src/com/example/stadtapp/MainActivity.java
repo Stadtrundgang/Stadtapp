@@ -24,10 +24,14 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 
+import android.app.ActionBar;
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -36,16 +40,84 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends Activity{
+public class MainActivity extends FragmentActivity{
 
 	Button btn_maps;
-	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		
+		// Declaring our tabs and the corresponding fragments.
+		ActionBar.Tab mapTab, photoTab, bilderTab;
+		Fragment mapFragmentTab = new SupportMapFragment();
+		//Fragment mapFragmentTab = new MapFragmentTab();
+		Fragment photoFragmentTab = new PhotoFragmentTab();
+		Fragment bilderFragmentTab = new BilderFragmentTab();
+		public static FragmentManager fragmentManager;
+		
+		@Override
+		protected void onCreate(Bundle savedInstanceState) {
+			super.onCreate(savedInstanceState);
+			setContentView(R.layout.activity_main);
+			
+			// Asking for the default ActionBar element that our platform supports.
+			ActionBar actionBar = getActionBar();
+			 
+	        // Screen handling while hiding ActionBar icon.
+	        actionBar.setDisplayShowHomeEnabled(false);
+	 
+	        // Screen handling while hiding Actionbar title.
+	        actionBar.setDisplayShowTitleEnabled(false);
+	 
+	        // Creating ActionBar tabs.
+	        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+	 
+	        // Setting custom tab icons.
+	        mapTab = actionBar.newTab().setIcon(R.drawable.map_logo);
+	        photoTab = actionBar.newTab().setIcon(R.drawable.photo_logo);
+	        bilderTab = actionBar.newTab().setIcon(R.drawable.bilder_logo);
+	        
+	        // Setting tab listeners.
+	        mapTab.setTabListener(new TabListener(mapFragmentTab));
+	        photoTab.setTabListener(new TabListener(photoFragmentTab));
+	        bilderTab.setTabListener(new TabListener(bilderFragmentTab));
+	       
+	        // Adding tabs to the ActionBar.
+	        actionBar.addTab(mapTab);
+	        actionBar.addTab(photoTab);
+	        actionBar.addTab(bilderTab);
+	        
+	        fragmentManager = getFragmentManager();
+		}
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* Funzt nicht der Driss
 		JSONObject jsonDoc = new JSONObject();
 		try {
 		jsonDoc.put("name", "Lolipop"); // erstellt Name=Value‐Paar
@@ -105,31 +177,11 @@ public class MainActivity extends Activity{
 	    return null;
 	}
 	
-	private String getParentRevision(String uuid, HttpClient httpClient) {
-		String rev = "";
-		try {
-		    HttpHead head = new HttpHead("http://192.168.56.101/testforms/" + uuid + "/");
-		    HttpResponse resp = httpClient.execute(head);
-		    Header[] headers = resp.getAllHeaders();		  
-		    for (Header header : headers) {		   
-		    if ("Etag".equals(header.getName())) {
-		        StringBuilder arg = new StringBuilder(header.getValue());
-		        if (arg.charAt(0) == '"') {
-		        arg.delete(0, 1);
-		        }
-		        if (arg.charAt(arg.length()-1) == '"'){
-		        arg.delete(arg.length()-1, arg.length());
-		        }
-		        rev = arg.toString();
-		        break;
-		    }
-		    }
-		} catch (Exception ex) {	    
-		}
-		return rev;
-		}
+*/
 
-}
+	}
+	
+
 	
 	
 

@@ -18,7 +18,7 @@ import android.net.http.*;
 
 public class JSONperHTTP {
 	
-
+/*
 	public String makeHttpPost(String url, String string2, Object object,
 			String body) {
 	
@@ -28,8 +28,8 @@ public class JSONperHTTP {
 		httpPost.setEntity(entity);
 		httpPost.setHeader("Accept", "application/json");
 		httpPost.setHeader("Content‐type", "application/json");
-		HttpResponse httpResponse = httpclient.execute(httpPost);
+		//HttpResponse httpResponse = httpclient.execute(httpPost);
 		
 	}
-
+*/
 }
