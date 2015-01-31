@@ -50,7 +50,8 @@ public class MainActivity extends FragmentActivity{
 		
 		// Declaring our tabs and the corresponding fragments.
 		ActionBar.Tab mapTab, photoTab, bilderTab;
-		Fragment mapFragmentTab = new MapFragmentTab();
+		//Fragment mapFragmentTab = new MapFragmentTab();
+		Fragment mapFragmentTab = new RegisterActivity();
 		Fragment photoFragmentTab = new PhotoFragmentTab();
 		Fragment bilderFragmentTab = new BilderFragmentTab();
 		public static FragmentManager fragmentManager;
