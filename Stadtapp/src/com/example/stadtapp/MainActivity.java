@@ -28,165 +28,120 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 
+
 import android.app.ActionBar;
+import android.app.ActionBar.Tab;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends FragmentActivity{
-
+public class MainActivity extends FragmentActivity {
+	
 	Button btn_maps;
-		
-		// Declaring our tabs and the corresponding fragments.
-		ActionBar.Tab mapTab, photoTab, bilderTab;
-		//Fragment mapFragmentTab = new MapFragmentTab();
-		Fragment mapFragmentTab = new RegisterActivity();
-		Fragment photoFragmentTab = new PhotoFragmentTab();
-		Fragment bilderFragmentTab = new BilderFragmentTab();
+
 		public static FragmentManager fragmentManager;
-		
+
+		ViewPager Tab;
+	    com.example.stadtapp.tabs.TabPagerAdapter TabAdapter;
+		ActionBar actionBar;
+				
 		@Override
 		protected void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
-			setContentView(R.layout.activity_main);
+			setContentView(R.layout.activity_main);			
 			
-			// Asking for the default ActionBar element that our platform supports.
-			ActionBar actionBar = getActionBar();
-			 
-	        // Screen handling while hiding ActionBar icon.
-	        actionBar.setDisplayShowHomeEnabled(false);
-	 
-	        // Screen handling while hiding Actionbar title.
-	        actionBar.setDisplayShowTitleEnabled(false);
-	 
-	        // Creating ActionBar tabs.
-	        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-	 
-	        // Setting custom tab icons.
-	        mapTab = actionBar.newTab().setIcon(R.drawable.map_logo);
-	        photoTab = actionBar.newTab().setIcon(R.drawable.photo_logo);
-	        bilderTab = actionBar.newTab().setIcon(R.drawable.bilder_logo);
-	        
-	        // Setting tab listeners.
-	        mapTab.setTabListener(new TabListener(mapFragmentTab));
-	        photoTab.setTabListener(new TabListener(photoFragmentTab));
-	        bilderTab.setTabListener(new TabListener(bilderFragmentTab));
-	       
-	        // Adding tabs to the ActionBar.
-	        actionBar.addTab(mapTab);
-	        actionBar.addTab(photoTab);
-	        actionBar.addTab(bilderTab);
-	        
-	        fragmentManager = getFragmentManager();
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		/* Funzt nicht der Driss
-		JSONObject jsonDoc = new JSONObject();
-		try {
-		jsonDoc.put("name", "Lolipop"); // erstellt Name=Value‐Paar
-		jsonDoc.put("latitude", 58.0);
-		jsonDoc.put("longitude", 7.88);
-		} catch (JSONException e) {
-		e.printStackTrace();
-		} // end try
-		String body = jsonDoc.toString();
-		JSONperHTTP jsonHTTP = new JSONperHTTP(); // eigene Hilfsklasse
-		String returnPost = jsonHTTP.makeHttpPost("http://141.28.100.212:5984/_utils/index.html", "POST", null,
-		body);
-		
-		
-		
-		
-		findViewById(R.id.btn_gmap).setOnClickListener( new View.OnClickListener() {
-		    @Override
-		    public void onClick(View v) {
-		        //Inform the user the button has been clicked
-		        Toast.makeText(MainActivity.this, "Button1 clicked.", Toast.LENGTH_SHORT).show(); 
-		        Intent intent = new Intent(MainActivity.this, GoogleMapsActivity.class);
-	            startActivity(intent);
-		    }
-		});
-		
-		findViewById(R.id.btn_photo).setOnClickListener( new View.OnClickListener() {
-		    @Override
-		    public void onClick(View v) {
-		        //Inform the user the button has been clicked
-		        Toast.makeText(MainActivity.this, "Button1 clicked.", Toast.LENGTH_SHORT).show(); 
-		        Intent intent = new Intent(MainActivity.this, EventsDemoActivity.class);
-	            startActivity(intent);
-		    }
-		});
-		
-	}
+			 TabAdapter = new com.example.stadtapp.tabs.TabPagerAdapter(getSupportFragmentManager());
+		        
+		        Tab = (ViewPager)findViewById(R.id.activity_main);
+		        Tab.setOnPageChangeListener(
+		                new ViewPager.SimpleOnPageChangeListener() {
+		                    @Override
+		                    public void onPageSelected(int position) {		                  
+		                    	actionBar = getActionBar();
+		                    	actionBar.setSelectedNavigationItem(position);                    }
+		                });
+		        Tab.setAdapter(TabAdapter);
+		        
+		        actionBar = getActionBar();
+		        //Enable Tabs on Action Bar
+		        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		        ActionBar.TabListener tabListener = new ActionBar.TabListener(){
 
+					@Override
+					public void onTabReselected(android.app.ActionBar.Tab tab,
+							FragmentTransaction ft) {
+						// TODO Auto-generated method stub				
+					}
 
-	public static HttpResponse makeUpdateRequest(String uri, Bitmap bmp) {
-	    try {
-	        HttpPut httpPut = new HttpPut(uri);
-	        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-	        bmp.compress(Bitmap.CompressFormat.PNG, 0, stream);
-	        ByteArrayEntity entity = new ByteArrayEntity(stream.toByteArray());
-	        entity.setContentType("image/png");
-	        entity.setChunked(true);
-	        httpPut.setEntity(entity);
-	        return new DefaultHttpClient().execute(httpPut);
-	    } catch (UnsupportedEncodingException e) {
-	        e.printStackTrace();
-	    } catch (ClientProtocolException e) {
-	        e.printStackTrace();
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	    }
-	    return null;
-	}
-	
-*/
+					@Override
+					 public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {		          
+			            Tab.setCurrentItem(tab.getPosition());
+			        }
 
-	}
+					@Override
+					public void onTabUnselected(android.app.ActionBar.Tab tab,
+							FragmentTransaction ft) {
+						// TODO Auto-generated method stub
+						
+					}};
+					//Add New Tab
+					actionBar.addTab(actionBar.newTab().setText("Android").setTabListener(tabListener));
+					actionBar.addTab(actionBar.newTab().setText("iOS").setTabListener(tabListener));
+					actionBar.addTab(actionBar.newTab().setText("Windows").setTabListener(tabListener));
+					actionBar.addTab(actionBar.newTab().setText("Maps").setTabListener(tabListener));
+
+					fragmentManager = getFragmentManager();
+        
+		}		
+}
 	
 
-	
-	
+/* NUR ALTER CODE ONE SWIPE FUNKTION	
+		// Declaring our tabs and the corresponding fragments.
+		//ActionBar.Tab mapTab, photoTab, bilderTab;
+		//Fragment mapFragmentTab = new MapFragmentTab();
+		//Fragment mapFragmentTab = new RegisterActivity();
+		//Fragment photoFragmentTab = new PhotoFragmentTab();
+		//Fragment bilderFragmentTab = new BilderFragmentTab();
+// Asking for the default ActionBar element that our platform supports.
+ActionBar actionBar = getActionBar();
+ 
+// Screen handling while hiding ActionBar icon.
+actionBar.setDisplayShowHomeEnabled(false);
 
+// Screen handling while hiding Actionbar title.
+actionBar.setDisplayShowTitleEnabled(false);
 
+// Creating ActionBar tabs.
+actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+// Setting custom tab icons.
+mapTab = actionBar.newTab().setIcon(R.drawable.map_logo);
+photoTab = actionBar.newTab().setIcon(R.drawable.photo_logo);
+bilderTab = actionBar.newTab().setIcon(R.drawable.bilder_logo);
+
+// Setting tab listeners.
+mapTab.setTabListener(new TabListener(mapFragmentTab));
+photoTab.setTabListener(new TabListener(photoFragmentTab));
+bilderTab.setTabListener(new TabListener(bilderFragmentTab));
+
+// Adding tabs to the ActionBar.
+actionBar.addTab(mapTab);
+actionBar.addTab(photoTab);
+actionBar.addTab(bilderTab);
+  */

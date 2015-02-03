@@ -1,5 +1,9 @@
 package com.example.stadtapp;
 
+import static us.monoid.web.Resty.*;
+import us.monoid.web.AbstractContent;
+import us.monoid.web.Resty;
+import us.monoid.web.Resty.*;
 import java.io.IOException;
 
 import org.apache.http.Header;
@@ -8,10 +12,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
  
 import android.app.Activity;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +44,11 @@ public class RegisterActivity extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
+    	
+    	
+    	StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        
         final View rootView = inflater.inflate(R.layout.register,
                 container, false);
         button = (Button)rootView.findViewById(R.id.btnRegister);
@@ -49,11 +59,7 @@ public class RegisterActivity extends Fragment {
       
         button.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
-            	
-            	
-            	//CouchDBActivity cdba = new CouchDBActivity();
-            	
-         
+            	/*
                 String name = nameET.getText().toString();
                 // Get Email ET control value
                 String email = emailET.getText().toString();       
@@ -64,7 +70,35 @@ public class RegisterActivity extends Fragment {
                         // Put Http parameter username with value of Email Edit View control
                         params.put("username", email);          
                         invokeWS(params);
-                       
+                  */
+            	JSONObject jsonDoc = new JSONObject();
+            	
+                try{
+            	jsonDoc.put("name", "Shadow Shaman");
+            	jsonDoc.put("username", "Dota2");    
+            	jsonDoc.put("latitude", 58.0);
+            	jsonDoc.put("longitude", 7.88);} 
+            	catch (JSONException e) {
+            		e.printStackTrace();
+            	}           	
+            	String body = jsonDoc.toString();
+            	try {
+            		body = new JSONObject().put("JSON", "Hello, World!").toString();
+					new Resty().json("http://141.28.100.212:5984/testify3/", put(body));
+					//new Resty().json("http://141.28.100.212:5984/testify2/", put(content(body)));
+					//new Resty().json("http://141.28.100.212:5984/ggbyandroidmichimobile/", form(data("name", "Draper"),
+				   //        data("occupation", "Ad Man")));
+					
+							
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					// Core Source http://beders.github.io/Resty/Resty/Overview.html
+					e.printStackTrace();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
                         
                         
                         
@@ -73,7 +107,12 @@ public class RegisterActivity extends Fragment {
         return rootView;
     }
  
-    /**
+    protected AbstractContent put(String body) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
      * Method gets triggered when Register button is clicked
      * 
      * @param view
@@ -91,6 +130,7 @@ public class RegisterActivity extends Fragment {
                 params.put("username", email);    
                 params.put("latitude", 58.0);
                 params.put("longitude", 7.88);
+         
                 invokeWS(params);
         } 
         // When any of the Edit View control left blank

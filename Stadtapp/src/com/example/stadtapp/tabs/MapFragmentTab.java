@@ -9,8 +9,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-//import android.support.v4.app.Fragment;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.location.Criteria;
 import android.location.Location;
@@ -51,6 +50,7 @@ private static Double latitude, longitude;
 @Override
 public View onCreateView(LayoutInflater inflater, ViewGroup container,
         Bundle savedInstanceState) {
+
     if (container == null) {
         return null;
     }
@@ -94,8 +94,7 @@ public static void setUpMapIfNeeded() {
     // Do a null check to confirm that we have not already instantiated the map.
     if (mMap == null) {
         // Try to obtain the map from the SupportMapFragment.
-        mMap = ((MapFragment) MainActivity.fragmentManager
-                .findFragmentById(R.id.location_map)).getMap();
+        mMap = ((MapFragment) MainActivity.fragmentManager.findFragmentById(R.id.location_map)).getMap();
 
         // Check if we were successful in obtaining the map.
         if (mMap != null)

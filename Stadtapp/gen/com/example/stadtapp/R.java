@@ -640,6 +640,9 @@ containing a value of this type.
         public static final int create_calendar_message=0x7f070005;
         public static final int create_calendar_title=0x7f070004;
         public static final int decline=0x7f070003;
+        public static final int demo_collection=0x7f070028;
+        public static final int demo_external_activity=0x7f070027;
+        public static final int dummy_section_text=0x7f070026;
         public static final int hello_world=0x7f070024;
         public static final int store_picture_message=0x7f070001;
         public static final int store_picture_title=0x7f070000;
