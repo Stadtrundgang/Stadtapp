@@ -95,7 +95,6 @@ public static void setUpMapIfNeeded() {
     if (mMap == null) {
         // Try to obtain the map from the SupportMapFragment.
         mMap = ((MapFragment) MainActivity.fragmentManager.findFragmentById(R.id.location_map)).getMap();
-
         // Check if we were successful in obtaining the map.
         if (mMap != null)
             setUpMap();
@@ -118,7 +117,10 @@ private static void setUpMap() {
     mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 	mMap.getUiSettings().setCompassEnabled(true); 
 	mMap.getUiSettings().setMyLocationButtonEnabled(true); // For testing
-    // For dropping a marker at a point on the Map
+	mMap.addMarker(new MarkerOptions()
+    .position(new LatLng(48.05136247223902, 8.207470066845417))
+    .title("A Bau - Eingang"));
+	// For dropping a marker at a point on the Map
     //mMap.addMarker(new MarkerOptions().position(new LatLng(latitude, longitude)).title("My Home").snippet("Home Address"));
     // For zooming automatically to the Dropped PIN Location
     //mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude,

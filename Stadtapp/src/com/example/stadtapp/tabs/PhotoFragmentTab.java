@@ -67,9 +67,9 @@ import android.widget.TextView;
 	            }
 	        });
 
-	       	     // Get the location manager 
+	       	 // Get the location manager 
 	        locationManager = 
-	        		(LocationManager)getActivity().getSystemService(Context.LOCATION_SERVICE);
+	        (LocationManager)getActivity().getSystemService(Context.LOCATION_SERVICE);
 	        // Define the criteria how to select the locatioin provider -> use
 	        // default
 	        Criteria criteria = new Criteria();

@@ -17,21 +17,15 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
 	public Fragment getItem(int i) {
 		switch (i) {
         case 0:
-            //Fragement for Android Tab
-            return new MapFragmentTab();
-        case 1:
-           //Fragment for Ios Tab
-            //return new Ios();
             return new PhotoFragmentTab();
+        case 1:
+            return new MapFragmentTab();
         case 2:
-            //Fragment for Windows Tab
             return new BilderFragmentTab();
         case 3:
-            //Fragment for Windows Tab
             return new RegisterActivity();
         }
-		return null;
-		
+		return null;	
 	}
 
 	@Override

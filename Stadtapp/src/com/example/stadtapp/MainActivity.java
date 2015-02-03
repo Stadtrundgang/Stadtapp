@@ -96,18 +96,18 @@ public class MainActivity extends FragmentActivity {
 					@Override
 					public void onTabUnselected(android.app.ActionBar.Tab tab,
 							FragmentTransaction ft) {
-						// TODO Auto-generated method stub
-						
+						// TODO Auto-generated method stub						
 					}};
+					
 					//Add New Tab
-					actionBar.addTab(actionBar.newTab().setText("Android").setTabListener(tabListener));
-					actionBar.addTab(actionBar.newTab().setText("iOS").setTabListener(tabListener));
-					actionBar.addTab(actionBar.newTab().setText("Windows").setTabListener(tabListener));
-					actionBar.addTab(actionBar.newTab().setText("Maps").setTabListener(tabListener));
-
-					fragmentManager = getFragmentManager();
-        
-		}		
+					actionBar.addTab(actionBar.newTab().setText("Photo").setTabListener(tabListener));
+					actionBar.addTab(actionBar.newTab().setText("Karte").setTabListener(tabListener));
+					actionBar.addTab(actionBar.newTab().setText("Bilder").setTabListener(tabListener));
+					actionBar.addTab(actionBar.newTab().setText("DatenSenden").setTabListener(tabListener));
+					
+					fragmentManager = getFragmentManager();     
+		}	
+			
 }
 	
 
