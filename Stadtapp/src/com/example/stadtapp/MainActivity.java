@@ -1,5 +1,8 @@
 package com.example.stadtapp;
 
+import static us.monoid.web.Resty.content;
+import static us.monoid.web.Resty.put;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -19,11 +22,13 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import us.monoid.web.JSONResource;
+import us.monoid.web.Resty;
+
 import com.example.stadtapp.R;
 import com.example.stadtapp.tabs.BilderFragmentTab;
 import com.example.stadtapp.tabs.MapFragmentTab;
 import com.example.stadtapp.tabs.PhotoFragmentTab;
-import com.example.stadtapp.tabs.TabListener;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -38,6 +43,7 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -103,10 +109,12 @@ public class MainActivity extends FragmentActivity {
 					actionBar.addTab(actionBar.newTab().setText("Photo").setTabListener(tabListener));
 					actionBar.addTab(actionBar.newTab().setText("Karte").setTabListener(tabListener));
 					actionBar.addTab(actionBar.newTab().setText("Bilder").setTabListener(tabListener));
-					actionBar.addTab(actionBar.newTab().setText("DatenSenden").setTabListener(tabListener));
+					//actionBar.addTab(actionBar.newTab().setText("DatenSenden").setTabListener(tabListener));
 					
 					fragmentManager = getFragmentManager();     
-		}	
+		}
+		
+		
 			
 }
 	

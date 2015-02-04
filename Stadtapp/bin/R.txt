@@ -111,8 +111,8 @@ int id adjust_height 0x7f0c0000
 int id adjust_width 0x7f0c0001
 int id book_now 0x7f0c0010
 int id btnRegister 0x7f0c0026
-int id button 0x7f0c0021
-int id button1 0x7f0c0022
+int id button_photo 0x7f0c0021
+int id button_upload 0x7f0c0022
 int id buyButton 0x7f0c000c
 int id buy_now 0x7f0c0011
 int id buy_with_google 0x7f0c0012

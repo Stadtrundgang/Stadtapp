@@ -1,7 +1,7 @@
 package com.example.stadtapp.tabs;
 
 
-import com.example.stadtapp.RegisterActivity;
+import com.example.stadtapp.test.RegisterActivity;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -22,8 +22,6 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
             return new MapFragmentTab();
         case 2:
             return new BilderFragmentTab();
-        case 3:
-            return new RegisterActivity();
         }
 		return null;	
 	}
@@ -31,7 +29,7 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return 4; //No of Tabs
+		return 3; //No of Tabs
 	}
 
 

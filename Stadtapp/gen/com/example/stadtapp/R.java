@@ -480,8 +480,8 @@ containing a value of this type.
         public static final int adjust_width=0x7f0c0001;
         public static final int book_now=0x7f0c0010;
         public static final int btnRegister=0x7f0c0026;
-        public static final int button=0x7f0c0021;
-        public static final int button1=0x7f0c0022;
+        public static final int button_photo=0x7f0c0021;
+        public static final int button_upload=0x7f0c0022;
         public static final int buyButton=0x7f0c000c;
         public static final int buy_now=0x7f0c0011;
         public static final int buy_with_google=0x7f0c0012;

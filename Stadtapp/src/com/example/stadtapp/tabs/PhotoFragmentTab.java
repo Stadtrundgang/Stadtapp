@@ -1,7 +1,14 @@
 package com.example.stadtapp.tabs;
 
-	import java.io.ByteArrayOutputStream;
+	import static us.monoid.web.Resty.content;
+import static us.monoid.web.Resty.put;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+
+import us.monoid.web.JSONResource;
+import us.monoid.web.Resty;
+import static us.monoid.web.Resty.*;
 import com.example.stadtapp.R;
 import com.example.stadtapp.R.id;
 import com.example.stadtapp.R.layout;
@@ -11,6 +18,7 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.provider.DocumentsContract.Root;
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
@@ -20,6 +28,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.app.Activity;
 
 import android.content.Context;
@@ -39,7 +48,7 @@ import android.widget.TextView;
 
 		
 	    private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 1888;
-	    Button button;
+	    Button button, button2;
 	    ImageView imageView;
 	    
 	    private TextView latituteField;
@@ -54,18 +63,72 @@ import android.widget.TextView;
 	        final View rootView = inflater.inflate(R.layout.photo_layout,
 	                container, false);
 
-	        button = (Button) rootView.findViewById(R.id.button);
+	        button = (Button) rootView.findViewById(R.id.button_photo);
+	        button2 = (Button) rootView.findViewById(R.id.button_upload);
 	        imageView = (ImageView) rootView.findViewById(R.id.imageview);
 
-	        button.setOnClickListener(new OnClickListener() {
-	            public void onClick(View view) {
+	        OnClickListener listener = new OnClickListener(){
 
-	                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-	                startActivityForResult(intent,
-	                        CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
-
-	            }
-	        });
+				@Override
+				public void onClick(View view) {
+					
+					switch(view.getId()){
+		        	
+		        	case R.id.button_photo :
+		            	{
+		        		Toast.makeText(getActivity(),"photo!",Toast.LENGTH_SHORT).show();
+			                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+			                startActivityForResult(intent,
+			                CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
+		            		break;
+		            	}
+		        	case R.id.button_upload :
+		            	{       
+		            		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+		                    StrictMode.setThreadPolicy(policy);
+		        			Toast.makeText(getActivity(),"uploading!",Toast.LENGTH_SHORT).show();
+		            		Resty r = new Resty();	            		
+		            		JSONResource json;
+		    				try {
+		    					json = r.json("http://141.28.100.212:5984/");
+		    						System.out.println("Database UUID: " + json.get("uuid"));	            		
+		            		json = r.json("http://141.28.100.212:5984/stadtapp/" + System.currentTimeMillis(),
+		            				put(content("{\"latitude \":\"48.124\", \"longitude\":\"12.133\"t, \"beschreibung\":\"stehe vor der kirche\"}")));	
+		            				//put(content("{\"nick_name\":\"xxx\", \"real_name\":\"Max xxx\", \"email\":\"user@mustermann.de\", \"password\":\"geheim\"}")));	            			
+		            		if(!(Boolean)json.get("ok")) {
+		            			throw new Exception(json.get("error") + ": " + json.get("cause"));    			
+		            		}	            		
+		            		String doc = json.get("id").toString();
+		            		System.out.println("Created user " + doc);	            		
+		            		json = r.json("http://141.28.100.212:5984/stadtapp/" + doc);
+		            		System.out.println("Refetched user from db:");
+		            		System.out.println("\tid: " + json.get("_id"));
+		            		System.out.println("\trev: " + json.get("_rev"));
+		            		//System.out.println("\tnick_name: " + json.get("nick_name"));
+		            		//System.out.println("\treal_name: " + json.get("real_name"));
+		            		//System.out.println("\temail: " + json.get("email"));
+		            		//System.out.println("\tpassword: " + json.get("password"));
+		    				    					
+		    				} catch (IOException e) {
+		    					// TODO Auto-generated catch block
+		    					e.printStackTrace();
+		    				} catch (Exception e) {
+		    					// TODO Auto-generated catch block
+		    					e.printStackTrace();
+		    				}      			            		
+		        		break;
+		        	}
+		        	
+		        	default:
+		        		break;
+		        	
+		        	
+		        	}
+				}   	
+	        };
+	        
+	        rootView.findViewById(R.id.button_photo).setOnClickListener(listener);
+	        rootView.findViewById(R.id.button_upload).setOnClickListener(listener);
 
 	       	 // Get the location manager 
 	        locationManager = 
@@ -75,15 +138,14 @@ import android.widget.TextView;
 	        Criteria criteria = new Criteria();
 	        provider = locationManager.getBestProvider(criteria, false);
 	        Location location = locationManager.getLastKnownLocation(provider);
-	        
-	        TextView tvkoordinaten = (TextView) rootView.findViewById(R.id.tvkoordinaten);
-	        tvkoordinaten.setText("blala");
-        
-	        
-	        
+      
 	        return rootView;
 
 	    }
+	    
+	    
+	    
+	    
 
 	    @Override
 	    public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -108,10 +170,6 @@ import android.widget.TextView;
 	    }   
 	    
 	}
-	
-	
-	
-	
 	
 	
 	
